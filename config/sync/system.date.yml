@@ -4,7 +4,7 @@ first_day: 0
 country:
   default: IT
 timezone:
-  default: Europe/Rome
+  default: Europe/Berlin
   user:
     configurable: true
     default: 0

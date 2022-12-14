@@ -1,4 +1,4 @@
-uuid: 156d5554-4dfd-4b48-acfb-413b8c1fead1
+uuid: ab40cb1d-e30b-4cd8-b366-79ebad7e16af
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - nowhere@gmail.com
+  - nowhere@mailinator.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

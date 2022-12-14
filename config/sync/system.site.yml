@@ -1,9 +1,9 @@
 _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
-uuid: 3b923847-0b5f-4d67-b754-8b715dd2fe52
-name: 'Corso Drupal'
-mail: nowhere@gmail.com
+uuid: 77c02955-5260-4f06-9019-b3bb5e493262
+name: corso_drupal
+mail: nowhere@mailinator.com
 slogan: ''
 page:
   403: ''
