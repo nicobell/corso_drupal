@@ -1,0 +1,23 @@
+uuid: f4077aa6-d7e7-4244-b859-1cba7bc586f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.room
+  module:
+    - text
+id: node.room.body
+field_name: body
+entity_type: node
+bundle: room
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,30 @@
+uuid: 6238bcff-7e89-4b22-a49d-6d7aa0782e62
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.collaboration.body
+    - field.field.node.collaboration.field_collaboration_logo_code
+    - field.field.node.collaboration.field_ictp_logo_import
+    - field.field.node.collaboration.field_image
+    - field.field.node.collaboration.field_ref_sections
+    - field.field.node.collaboration.field_single_url
+    - node.type.collaboration
+  module:
+    - user
+id: node.collaboration.teaser
+targetEntityType: node
+bundle: collaboration
+mode: teaser
+content: {  }
+hidden:
+  body: true
+  field_collaboration_logo_code: true
+  field_ictp_logo_import: true
+  field_image: true
+  field_ref_sections: true
+  field_single_url: true
+  links: true
+  search_api_excerpt: true
+  sharing_buttons: true

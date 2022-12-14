@@ -1,0 +1,23 @@
+uuid: 425ce0b6-95d4-4152-b78c-edd61afd8bfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ictp_logo_import
+    - node.type.collaboration
+id: node.collaboration.field_ictp_logo_import
+field_name: field_ictp_logo_import
+entity_type: node
+bundle: collaboration
+label: 'ICTP logo import'
+description: "<strong><big>If checked, when saving, the system try to import the logo from provided code.</big></strong><br>\r\n<a target=\"_blank\" href=\"/admin/ictp_indico/collaborationlogos\">View ICTP logos database from INDICO</a>"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,153 @@
+uuid: 6e527d39-fbb7-4144-b9c8-32761f932d21
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.building
+    - node.type.carousel_image
+    - node.type.chart
+    - node.type.collaboration
+    - node.type.collaboration_group
+    - node.type.event
+    - node.type.external_member
+    - node.type.field_of_research
+    - node.type.group_of_people
+    - node.type.infographic
+    - node.type.infographic_group
+    - node.type.job_opportunity
+    - node.type.open_bids
+    - node.type.opportunity
+    - node.type.page
+    - node.type.prize
+    - node.type.project
+    - node.type.publication
+    - node.type.room
+    - node.type.topic
+    - node.type.winner
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.theme_topic
+  module:
+    - contextual
+    - file
+    - node
+    - path
+    - system
+    - taxonomy
+    - tour
+_core:
+  default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access tour'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer url aliases'
+  - 'create article content'
+  - 'create building content'
+  - 'create carousel_image content'
+  - 'create chart content'
+  - 'create collaboration content'
+  - 'create collaboration_group content'
+  - 'create external_member content'
+  - 'create field_of_research content'
+  - 'create group_of_people content'
+  - 'create infographic content'
+  - 'create infographic_group content'
+  - 'create job_opportunity content'
+  - 'create open_bids content'
+  - 'create opportunity content'
+  - 'create page content'
+  - 'create prize content'
+  - 'create project content'
+  - 'create room content'
+  - 'create terms in tags'
+  - 'create terms in theme_topic'
+  - 'create topic content'
+  - 'create url aliases'
+  - 'create winner content'
+  - 'delete any article content'
+  - 'delete any carousel_image content'
+  - 'delete any chart content'
+  - 'delete any collaboration content'
+  - 'delete any collaboration_group content'
+  - 'delete any external_member content'
+  - 'delete any field_of_research content'
+  - 'delete any job_opportunity content'
+  - 'delete any open_bids content'
+  - 'delete any opportunity content'
+  - 'delete any page content'
+  - 'delete any prize content'
+  - 'delete any project content'
+  - 'delete any room content'
+  - 'delete any topic content'
+  - 'delete any winner content'
+  - 'delete article revisions'
+  - 'delete own article content'
+  - 'delete own building content'
+  - 'delete own carousel_image content'
+  - 'delete own chart content'
+  - 'delete own external_member content'
+  - 'delete own field_of_research content'
+  - 'delete own group_of_people content'
+  - 'delete own infographic content'
+  - 'delete own infographic_group content'
+  - 'delete own job_opportunity content'
+  - 'delete own open_bids content'
+  - 'delete own opportunity content'
+  - 'delete own page content'
+  - 'delete own project content'
+  - 'delete own room content'
+  - 'delete own topic content'
+  - 'delete page revisions'
+  - 'delete terms in theme_topic'
+  - 'edit any article content'
+  - 'edit any building content'
+  - 'edit any carousel_image content'
+  - 'edit any chart content'
+  - 'edit any collaboration content'
+  - 'edit any collaboration_group content'
+  - 'edit any event content'
+  - 'edit any external_member content'
+  - 'edit any field_of_research content'
+  - 'edit any group_of_people content'
+  - 'edit any infographic content'
+  - 'edit any infographic_group content'
+  - 'edit any job_opportunity content'
+  - 'edit any open_bids content'
+  - 'edit any opportunity content'
+  - 'edit any page content'
+  - 'edit any prize content'
+  - 'edit any project content'
+  - 'edit any publication content'
+  - 'edit any room content'
+  - 'edit any topic content'
+  - 'edit any winner content'
+  - 'edit own article content'
+  - 'edit own building content'
+  - 'edit own carousel_image content'
+  - 'edit own chart content'
+  - 'edit own external_member content'
+  - 'edit own field_of_research content'
+  - 'edit own group_of_people content'
+  - 'edit own job_opportunity content'
+  - 'edit own open_bids content'
+  - 'edit own opportunity content'
+  - 'edit own page content'
+  - 'edit own project content'
+  - 'edit own topic content'
+  - 'edit terms in tags'
+  - 'edit terms in theme_topic'
+  - 'revert all revisions'
+  - 'view all revisions'
+  - 'view chart revisions'
+  - 'view external_member revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view the administration theme'

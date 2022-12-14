@@ -1,0 +1,19 @@
+uuid: 37c9a4c4-58df-4f12-a0d3-df4e365d7063
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_indico_keywords
+field_name: field_indico_keywords
+entity_type: taxonomy_term
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

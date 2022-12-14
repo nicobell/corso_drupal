@@ -1,0 +1,24 @@
+uuid: 9cd4d215-1b4e-4084-842f-0702011eb0f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lecture_description
+    - node.type.event
+  module:
+    - text
+id: node.event.field_lecture_description
+field_name: field_lecture_description
+entity_type: node
+bundle: event
+label: 'Lecture Description'
+description: "Please add the speakers' information <b>ONLY</b> for <i>Salam Distinguished Lectures</i>. \r\n\r\nThe max length of this field should be 250 characters."
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>Please add the speakers' information <strong>ONLY</strong> for <em>Salam Distinguished Lectures</em></p>\r\n\r\n<p>The max length of this field should be 250 characters.</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

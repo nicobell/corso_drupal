@@ -1,0 +1,21 @@
+uuid: fc45543f-8926-4d76-83f7-40fb91ff9975
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_entitlements
+    - node.type.opportunity
+  module:
+    - text
+id: node.opportunity.field_entitlements
+field_name: field_entitlements
+entity_type: node
+bundle: opportunity
+label: Entitlements
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

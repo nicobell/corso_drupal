@@ -1,0 +1,19 @@
+uuid: 93fda432-71c6-43ee-a06c-95fc75f747b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_collaboration_logo_code
+    - node.type.collaboration
+id: node.collaboration.field_collaboration_logo_code
+field_name: field_collaboration_logo_code
+entity_type: node
+bundle: collaboration
+label: 'Logo external code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

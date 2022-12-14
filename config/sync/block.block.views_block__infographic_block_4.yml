@@ -1,0 +1,29 @@
+uuid: 0fa189a5-17d4-41eb-ad82-2bc2764d7572
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.infographic
+  module:
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__infographic_block_4
+theme: ictp
+region: content
+weight: -24
+provider: null
+plugin: 'views_block:infographic-block_4'
+settings:
+  id: 'views_block:infographic-block_4'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/39

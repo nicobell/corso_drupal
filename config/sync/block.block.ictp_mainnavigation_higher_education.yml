@@ -1,0 +1,31 @@
+uuid: d4db7bac-df14-4ab0-83e0-6b84d1315cb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - ictp
+id: ictp_mainnavigation_higher_education
+theme: ictp
+region: footer_4
+weight: -43
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Higher education'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: active
+  label_link: false
+  label_type: fixed
+  level: 1
+  depth: 1
+  expand_all_items: true
+  parent: 'main:menu_link_content:ff01ebef-04c0-470f-a060-078fa4535769'
+  suggestion: main
+visibility: {  }

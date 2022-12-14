@@ -1,0 +1,17 @@
+uuid: 10dcd54f-6fe8-4bf0-934a-460de0a4c978
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Chart
+type: chart
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,19 @@
+uuid: 6c10dbdc-000d-419f-a2eb-d3ef7a0676d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_title
+    - node.type.opportunity
+id: node.opportunity.field_short_title
+field_name: field_short_title
+entity_type: node
+bundle: opportunity
+label: 'Short title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,17 @@
+uuid: 355b4cca-3abe-4158-aed2-b73fabded97d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Collaboration group'
+type: collaboration_group
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

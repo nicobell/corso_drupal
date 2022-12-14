@@ -1,0 +1,8 @@
+uuid: 3b0a9f57-68ff-4f68-8dde-6b5521e5ccaa
+langcode: en
+status: true
+dependencies: {  }
+id: node__building
+label: 'Content: Building'
+tags:
+  image_src: '[node:field_image]'

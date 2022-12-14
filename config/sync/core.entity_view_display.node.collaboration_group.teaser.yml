@@ -1,0 +1,35 @@
+uuid: 49ec945e-1ed6-449f-95b1-f95d30cd91cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.collaboration_group.field_description
+    - field.field.node.collaboration_group.field_ref_collaborations
+    - field.field.node.collaboration_group.field_ref_section
+    - field.field.node.collaboration_group.field_weight
+    - node.type.collaboration_group
+  module:
+    - user
+id: node.collaboration_group.teaser
+targetEntityType: node
+bundle: collaboration_group
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_ref_collaborations: true
+  field_ref_section: true
+  field_weight: true
+  langcode: true
+  search_api_excerpt: true

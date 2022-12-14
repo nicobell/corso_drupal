@@ -1,0 +1,62 @@
+uuid: 062d92f4-5ea2-4b2a-9d88-9a9fa11c908a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_end_time
+    - field.field.node.event.field_event_deadline
+    - field.field.node.event.field_event_hash
+    - field.field.node.event.field_event_location_description
+    - field.field.node.event.field_event_room
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_hosted_activities
+    - field.field.node.event.field_ictp_activities_outside
+    - field.field.node.event.field_image
+    - field.field.node.event.field_indico_guid
+    - field.field.node.event.field_lecture_description
+    - field.field.node.event.field_ref_event_location
+    - field.field.node.event.field_ref_members
+    - field.field.node.event.field_ref_section
+    - field.field.node.event.field_ref_sections
+    - field.field.node.event.field_ref_targets
+    - field.field.node.event.field_speakers
+    - field.field.node.event.field_start_date
+    - field.field.node.event.field_start_time
+    - field.field.node.event.field_topic
+    - node.type.event
+  module:
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content: {  }
+hidden:
+  body: true
+  field_end_date: true
+  field_end_time: true
+  field_event_deadline: true
+  field_event_hash: true
+  field_event_location_description: true
+  field_event_room: true
+  field_event_type: true
+  field_hosted_activities: true
+  field_ictp_activities_outside: true
+  field_image: true
+  field_indico_guid: true
+  field_lecture_description: true
+  field_ref_event_location: true
+  field_ref_members: true
+  field_ref_section: true
+  field_ref_sections: true
+  field_ref_targets: true
+  field_speakers: true
+  field_start_date: true
+  field_start_time: true
+  field_topic: true
+  links: true
+  search_api_excerpt: true
+  sharing_buttons: true

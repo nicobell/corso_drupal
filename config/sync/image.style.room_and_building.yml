@@ -1,0 +1,26 @@
+uuid: c02df0e8-0fcd-4c4b-b29b-1b28f56a17c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.room_and_building
+  module:
+    - crop
+name: room_and_building
+label: 'Room and Building'
+effects:
+  3aa7c4d7-df6c-4521-83f0-524e1919547e:
+    uuid: 3aa7c4d7-df6c-4521-83f0-524e1919547e
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: room_and_building
+      automatic_crop_provider: null
+  aea52ee4-cb88-4efa-85f9-22f878a451f2:
+    uuid: aea52ee4-cb88-4efa-85f9-22f878a451f2
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 900
+      height: 506
+      anchor: left-top

@@ -1,0 +1,19 @@
+uuid: 154029a8-45ee-4293-ab63-b197a4791648
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url_news_umbraco
+    - node.type.article
+id: node.article.field_url_news_umbraco
+field_name: field_url_news_umbraco
+entity_type: node
+bundle: article
+label: 'url news umbraco'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

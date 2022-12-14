@@ -1,0 +1,30 @@
+uuid: 362485ce-7073-4301-82b4-9099960604e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_visa_who_are_you
+field_name: field_visa_who_are_you
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'NON-EU passaport holders'
+    -
+      value: '2'
+      label: 'NON -EU passaport holders residing in a Schengen member state'
+    -
+      value: '3'
+      label: 'EU passaport holders'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

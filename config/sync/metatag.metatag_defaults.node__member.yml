@@ -1,0 +1,9 @@
+uuid: 9e0cb8fe-7cd0-4b4d-9d09-bd17c2cf3770
+langcode: en
+status: true
+dependencies: {  }
+id: node__member
+label: 'Content: Member'
+tags:
+  description: '[node:field_role:entity:name] | [node:field_job_title]'
+  image_src: '[node:field_profile_picture]'

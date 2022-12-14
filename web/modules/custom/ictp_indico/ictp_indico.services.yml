@@ -1,0 +1,7 @@
+services:
+  ictp_indico.indico:
+    class: Drupal\ictp_indico\Indico
+  ictp_indico.redirectevent:
+    class: Drupal\ictp_indico\EventSubscriber\IctpIndicoRedirectSubscriber
+    tags:
+      - { name: event_subscriber }

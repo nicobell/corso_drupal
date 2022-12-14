@@ -1,0 +1,30 @@
+uuid: eb4b446a-387c-4129-8c5b-e5ad66be91d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.charts
+  module:
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__charts_block_1_2
+theme: ictp
+region: content
+weight: -13
+provider: null
+plugin: 'views_block:charts-block_1'
+settings:
+  id: 'views_block:charts-block_1'
+  label: 'Chart Educations'
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: 'Chart Educations'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home/education

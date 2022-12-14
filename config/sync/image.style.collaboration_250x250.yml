@@ -1,0 +1,15 @@
+uuid: da5feffa-12c2-496c-b336-aeaee9941bd9
+langcode: en
+status: true
+dependencies: {  }
+name: collaboration_250x250
+label: 'Collaboration (250x250)'
+effects:
+  0c875ad4-a8e8-4210-9be2-28c01f7c40cd:
+    uuid: 0c875ad4-a8e8-4210-9be2-28c01f7c40cd
+    id: image_scale
+    weight: 1
+    data:
+      width: 250
+      height: 250
+      upscale: false

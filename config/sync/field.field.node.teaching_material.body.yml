@@ -1,0 +1,23 @@
+uuid: e4e7fae6-382c-4ca0-acf8-7df79d88ad12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.teaching_material
+  module:
+    - text
+id: node.teaching_material.body
+field_name: body
+entity_type: node
+bundle: teaching_material
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

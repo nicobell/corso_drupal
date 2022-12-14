@@ -1,0 +1,17 @@
+uuid: ccb5596a-b67c-4ba4-a72a-bdee564fe2ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Room
+type: room
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

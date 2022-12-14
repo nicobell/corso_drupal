@@ -1,0 +1,39 @@
+uuid: b2e8794a-37bb-4a94-8a54-20ff1eb1e9e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_news_audience
+field_name: field_news_audience
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: All
+      label: All
+    -
+      value: 'ICTP community'
+      label: 'ICTP community'
+    -
+      value: 'General public'
+      label: 'General public'
+    -
+      value: Media
+      label: Media
+    -
+      value: Students
+      label: Students
+    -
+      value: Scientists
+      label: Scientists
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

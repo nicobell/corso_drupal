@@ -1,0 +1,5 @@
+services:
+  ictp_custom.redirect:
+    class: Drupal\ictp_custom\EventSubscriber\IctpRedirectSubscriber
+    tags:
+      - { name: event_subscriber }

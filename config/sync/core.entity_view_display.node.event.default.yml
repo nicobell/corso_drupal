@@ -1,0 +1,239 @@
+uuid: 46636d78-4a65-4835-b576-959a2ffb9aa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.body
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_end_time
+    - field.field.node.event.field_event_deadline
+    - field.field.node.event.field_event_hash
+    - field.field.node.event.field_event_location_description
+    - field.field.node.event.field_event_room
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_hosted_activities
+    - field.field.node.event.field_ictp_activities_outside
+    - field.field.node.event.field_image
+    - field.field.node.event.field_indico_guid
+    - field.field.node.event.field_lecture_description
+    - field.field.node.event.field_ref_event_location
+    - field.field.node.event.field_ref_members
+    - field.field.node.event.field_ref_section
+    - field.field.node.event.field_ref_sections
+    - field.field.node.event.field_ref_targets
+    - field.field.node.event.field_speakers
+    - field.field.node.event.field_start_date
+    - field.field.node.event.field_start_time
+    - field.field.node.event.field_topic
+    - node.type.event
+  module:
+    - datetime
+    - svg_image
+    - text
+    - time_field
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  body:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 400
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_end_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_end_time:
+    type: time_formatter
+    label: hidden
+    settings:
+      time_format: 'h:i a'
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_event_deadline:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_event_hash:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_event_location_description:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_event_room:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_event_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_hosted_activities:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_ictp_activities_outside:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_indico_guid:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_lecture_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_ref_event_location:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_ref_members:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_ref_section:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_ref_sections:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_ref_targets:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_speakers:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_start_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_start_time:
+    type: time_formatter
+    label: hidden
+    settings:
+      time_format: 'h:i a'
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_topic:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

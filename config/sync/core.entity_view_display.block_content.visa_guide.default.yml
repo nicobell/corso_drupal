@@ -1,0 +1,24 @@
+uuid: 67d3c229-a00f-4ffc-a2f9-62a184bb4753
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.visa_guide
+    - field.field.block_content.visa_guide.body
+  module:
+    - text
+id: block_content.visa_guide.default
+targetEntityType: block_content
+bundle: visa_guide
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

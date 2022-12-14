@@ -1,0 +1,21 @@
+uuid: d681dff5-451c-43e6-b5fa-251d84f67f75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prize_nomination
+    - node.type.prize
+  module:
+    - text
+id: node.prize.field_prize_nomination
+field_name: field_prize_nomination
+entity_type: node
+bundle: prize
+label: Nomination
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

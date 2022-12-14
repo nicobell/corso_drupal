@@ -1,0 +1,24 @@
+uuid: 125b2a7c-92c1-43e9-8f29-3ffc5638d777
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.building
+  module:
+    - views
+  theme:
+    - ictp
+id: views_block__building_campus_search
+theme: ictp
+region: hidden_region
+weight: -65
+provider: null
+plugin: 'views_block:building-campus_search'
+settings:
+  id: 'views_block:building-campus_search'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,47 @@
+<?php
+/**
+ * @file
+ * Installation file for miniOrange LDAP Module.
+ */
+use Drupal\ldap_auth\feedback;
+use Drupal\ldap_auth\Utilities;
+
+/**
+ * hook_uninstall not needed.
+ * Configure variables are cleared when module is uninstalled.
+ **/
+
+
+function ldap_auth_uninstall() {
+
+        $status = \Drupal::config('ldap_auth.settings')->get('miniorange_ldap_auth_uninstall_status');
+        if(!( $status == 1)){
+          \Drupal::configFactory()->getEditable('ldap_auth.settings')->set('miniorange_ldap_feedback_status',1)->save();
+        }
+
+       if(\Drupal::config('ldap_auth.settings')->get('miniorange_ldap_feedback_status') == '1') {
+          $drupal_is_cli = Utilities::drupal_is_cli();
+          if($drupal_is_cli)
+          {
+            \Drupal::configFactory()->getEditable('ldap_auth.settings')->clear('miniorange_ldap_feedback_status')->save();
+          }
+          else{
+            \Drupal::configFactory()->getEditable('ldap_auth.settings')->clear('miniorange_ldap_feedback_status')->save();
+            feedback::ldap_auth_feedback();
+          }
+       }
+}
+function ldap_auth_install(){
+    $config = \Drupal::configFactory()->getEditable('ldap_auth.settings');
+    $config->set('miniorange_ldap_steps', "0")->save();
+    $config->set('miniorange_ldap_inst_time_ref', time());
+    $config->set('miniorange_ldap_license_page_visited', "False");
+    $config->set('miniorange_ldap_contacted_server', "Did not Try");
+    $config->set('miniorange_ldap_test_connection', "Did not Try");
+    $config->set('miniorange_ldap_drupal_login', "Did not Try");
+    $config->set('miniorange_ldap_server_port_number', '389');
+    $config->set('miniorange_ldap_custom_username_attribute', 'samaccountName');
+    $config->set('miniorange_ldap_feedback_status', '1');
+    $config->set('miniorange_ldap_auth_uninstall_status',0);
+    $config->save();
+}

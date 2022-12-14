@@ -1,0 +1,18 @@
+uuid: 8047a318-ce86-408b-9379-86004599a288
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.timeline
+id: node.timeline.title
+field_name: title
+entity_type: node
+bundle: timeline
+label: 'Experience Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

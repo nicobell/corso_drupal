@@ -1,0 +1,124 @@
+uuid: 3f1b4772-1748-4eb0-bd22-542eb0924fae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.open_bids.field_attachments
+    - field.field.node.open_bids.field_bids_contact_name
+    - field.field.node.open_bids.field_deadline_extended
+    - field.field.node.open_bids.field_description
+    - field.field.node.open_bids.field_job_opp_deadline
+    - field.field.node.open_bids.field_job_opportunity_add_docs
+    - field.field.node.open_bids.field_profile_email
+    - field.field.node.open_bids.field_profile_phone
+    - field.field.node.open_bids.field_ref_bid_status
+    - field.field.node.open_bids.field_website
+    - node.type.open_bids
+  module:
+    - datetime
+    - file
+    - link
+    - text
+    - user
+id: node.open_bids.default
+targetEntityType: node
+bundle: open_bids
+mode: default
+content:
+  field_attachments:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_bids_contact_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_deadline_extended:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_job_opp_deadline:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: news_format
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_job_opportunity_add_docs:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_profile_email:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_profile_phone:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_ref_bid_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_website:
+    type: link
+    label: above
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  search_api_excerpt: true

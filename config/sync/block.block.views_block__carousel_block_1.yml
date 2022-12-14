@@ -1,0 +1,38 @@
+uuid: 2b8cb5cc-2b4b-4a09-8e84-03e3ff0fa34e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.carousel
+  module:
+    - system
+    - taxonomy
+    - views
+  theme:
+    - ictp
+id: views_block__carousel_block_1
+theme: ictp
+region: hero
+weight: -63
+provider: null
+plugin: 'views_block:carousel-block_1'
+settings:
+  id: 'views_block:carousel-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      section: section
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/hecap\r\n/cmsp"

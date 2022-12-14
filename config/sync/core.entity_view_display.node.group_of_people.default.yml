@@ -1,0 +1,63 @@
+uuid: 562139ff-b827-47b6-91fe-d43dcbfb10eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.group_of_people.field_description
+    - field.field.node.group_of_people.field_ref_member_and_external
+    - field.field.node.group_of_people.field_ref_section
+    - field.field.node.group_of_people.field_weight
+    - node.type.group_of_people
+  module:
+    - text
+    - user
+id: node.group_of_people.default
+targetEntityType: node
+bundle: group_of_people
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_ref_member_and_external:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_ref_section:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_weight:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

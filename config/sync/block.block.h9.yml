@@ -1,0 +1,25 @@
+uuid: 76a2bdb5-7d8d-405f-97e6-7b2a8f2203c9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:visa_guide:973b615f-a8de-41c3-9596-8eeacca6ae38'
+  module:
+    - block_content
+  theme:
+    - ictp
+id: h9
+theme: ictp
+region: hidden_region
+weight: -43
+provider: null
+plugin: 'block_content:973b615f-a8de-41c3-9596-8eeacca6ae38'
+settings:
+  id: 'block_content:973b615f-a8de-41c3-9596-8eeacca6ae38'
+  label: H9
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

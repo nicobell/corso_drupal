@@ -1,0 +1,33 @@
+uuid: ee3ab233-5041-426e-8485-02d1aab55e25
+langcode: en
+status: true
+dependencies: {  }
+id: ldapmember
+label: ldapmember
+description: null
+provider: ldap_provider
+provider_config:
+  status:
+    server: adictp
+    only_ldap_authenticated: false
+  filter_and_mappings:
+    use_first_attr_as_groupid: false
+provider_mappings:
+  -
+    query: 'CN=ICTPWebStaffGroup,CN=Users,DC=ictp,DC=it'
+    is_regex: false
+  -
+    query: 'CN=ICTPWebEditorsGroup,CN=Users,DC=ictp,DC=it'
+    is_regex: false
+consumer: authorization_drupal_roles
+consumer_config: {  }
+consumer_mappings:
+  -
+    role: member
+  -
+    role: content_editor
+synchronization_modes:
+  user_logon: user_logon
+synchronization_actions:
+  create_consumers: '0'
+  revoke_provider_provisioned: revoke_provider_provisioned

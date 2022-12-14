@@ -1,0 +1,25 @@
+uuid: fdb65856-8b9c-48e8-9204-e1d3f1a7a989
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:visa_guide:3f62ec2a-97c1-470c-8347-c1bfe4726a89'
+  module:
+    - block_content
+  theme:
+    - ictp
+id: h10
+theme: ictp
+region: hidden_region
+weight: -51
+provider: null
+plugin: 'block_content:3f62ec2a-97c1-470c-8347-c1bfe4726a89'
+settings:
+  id: 'block_content:3f62ec2a-97c1-470c-8347-c1bfe4726a89'
+  label: H10
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

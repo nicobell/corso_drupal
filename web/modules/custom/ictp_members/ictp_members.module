@@ -1,0 +1,250 @@
+<?php
+
+/**
+ * @author Alessandro Fontana
+ */
+
+use Drupal\ictp_members\IctpMembersController;
+
+ /**
+ * @file
+ * Contains hooks implementations and helper functions for ictp_members.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+const ALPHA_GROUPS        = 'https://phonebook.ictp.it/api/public/alpha_groups/';
+const ALL_SECTORS         = 'https://phonebook.ictp.it/api/public/sectors/all/';
+const WITH_PERSONS        = 'https://phonebook.ictp.it/api/public/sectors/with_persons/';
+const PERSON_DETAIL       = 'https://phonebook.ictp.it/api/public/staff/item/'; // add ID member
+const STRIP_AD            = 'ictp.it\\';
+const BASE_PICTURE_URL    = 'https://phonebook.ictp.it'; // Nel json il path dell'immagine ha sempre la barra davanti
+
+/**
+ *  Phonebook ['main_group_id'] --> taxonomy 'Member role' drupal
+ *  (sono importate così come sono nel phonebook)
+ */
+const ROLES_FOR_PERSONAL_PAGE = array(
+  "17" => "Head of the Section",
+  "18" => "Permanent Scientific Staff",
+  "23" => "Postdoctoral Fellows",
+  "54" => "Unit Coordinator",
+  "41" => "Director ICTP"
+);
+
+/**
+ * Il group_name è salvato solo dentro picture, se picture è null non abbiamo il nome del gruppo a cui associare il member
+ * - nella lista utenti è presente solo ID del group, quindi se picture null associo tramite questa lista STATICA
+ */
+const CURRENT_ROLES_PHONEBOOK = array(
+  "41" =>	"Director, ICTP",
+  "17" =>	"Head of the Section",
+  "54" =>	"Unit Coordinator",
+  "25" =>	"Secretariat",
+  "18" =>	"Permanent Scientific Staff",
+  "43" =>	"Staff",
+  "19" =>	"Emeritus Scientists",
+  "56" =>	"ICTP International Chair",
+  "26" =>	"Distinguished Staff Associate",
+  "44" =>	"Research Staff Associates",
+  "27" =>	"Research Staff Associate",
+  "28" =>	"Long-term Visiting Scientists",
+  "20" =>	"Scientific Consultants",
+  "30" =>	"Scientific Collaborators",
+  "21" =>	"Visiting Professor",
+  "23" =>	"Postdoctoral Fellows",
+  "24" =>	"PhD Students",
+  "46" =>	"STEP Fellows",
+  "55" =>	"ICTP-EAIFR Scientific Staff",
+  "29" =>	"CMSP Associates",
+  "36" =>	"Visiting Researchers",
+  "47" =>	"Visiting Scientist",
+  "39" =>	"Visiting Scientists",
+  "37" =>	"Simons Associates",
+  "42" =>	"Course Secretaries",
+  "48" =>	"HECAP Associates",
+  "49" =>	"ESP Associates",
+  "50" =>	"Mathematics Associates",
+  "51" =>	"QLS Associates",
+  "53" =>	"STI Associates",
+  "57" =>	"MMP Associates"
+);
+
+/**
+ *  Phonebook ['main_sector_id'] --> tid section drupal
+ * 
+ *  HECAP - 927
+ *  CMSP  - 912
+ *  QLS   - 945
+ *  MATH  - 938
+ *  ESP   - 963
+ *  STI   - 998
+ *  DIR   - 919
+ * */
+
+ 
+const SECTIONS_TO_IMPORT = array(
+  "927" => 2,
+  "912" => 3,
+  "945" => 6,
+  "938" => 5,
+  "963" => 7,
+  "998" => 4,
+  "919" => null
+);
+
+
+/** Mapping field between drupal and phonebook (member detail)
+ * (profile picture excluded)
+ * 
+ * NOTA IMPORTANTE:
+ * ad_username in phonebook è presente allo stesso livello degli altri campi (name, email...) se si prende la lista degli utenti,
+ * se invece si cerca nel dettaglio del member é dentro -->['picture']['staffs'][0]['ad_username'] e non allo stesso livello
+ * degli altri campi (??? vaccata ???)
+ * 
+ */
+const FIELDS_MAP = array(
+  "field_active_directory_id" => "ad_username",
+  "field_name" => "name",
+  "field_surname" => "surname",
+  "field_profile_email" => "email",
+  "field_profile_phone" => "phone",
+  "field_profile_fax" => "fax",
+  "field_job_title" => "main_role",
+  "field_profile_room" => "location",
+  //"field_personal_page" => "website"
+);
+
+ /**
+ * Implements hook_help().
+ */
+function ictp_members_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ictp_members module.
+    case 'help.page.ictp_members':
+      $output = '';
+      $output .= '<h3>' . t('Members') . '</h3>';
+      $output .= '<p>' . t('This module allows you to import members from ICTP phonebook.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function ictp_members_form_node_member_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  $current_user = \Drupal::currentUser();
+  $roles = $current_user->getRoles();
+  // Ripristinato editing ORCID by member
+  // $isOrcidEditable = in_array('administrator',$roles) || in_array('content_editor',$roles);
+  $isTechnicalEditable = in_array('administrator',$roles);
+
+  //dpm($form);
+  $form['title']['#disabled'] = true;
+  $form['field_hash']['#disabled'] = !$isTechnicalEditable;
+  $form['field_personal_page']['#disabled'] = true;
+  $form['field_role']['#disabled'] = true;
+  $form['field_name']['#disabled'] = true;
+  // $form['field_orcid']['#disabled'] = !$isOrcidEditable;
+  $form['field_surname']['#disabled'] = true;
+  $form['field_active_directory_id']['#disabled'] = true;
+  $form['field_ref_sections']['#disabled'] = true;
+  $form['field_profile_email']['#disabled'] = true;
+  $form['field_profile_phone']['#disabled'] = true;
+  $form['field_profile_fax']['#disabled'] = true;
+  $form['field_profile_room']['#disabled'] = true;
+
+  // Hidden fields
+  $form['field_sync_id']['#type']= 'hidden';
+  $form['field_orcid_last_modified_date']['#type']= $isTechnicalEditable ? 'visible' : 'hidden';
+  $form['field_hash']['#type']= $isTechnicalEditable ? 'visible' : 'hidden';
+  $form['field_instagram']['#type']= 'hidden';
+  $form['field_linkedin']['#type']= 'hidden';
+  $form['field_facebook']['#type']= 'hidden';
+  $form['field_twitter']['#type']= 'hidden';
+  $form['field_personal_page']['#type']= 'hidden';
+  $form['field_ref_members']['#type']= 'hidden';
+
+  // ORCID VALIDATION
+  $form['#validate'][] = 'orcid_validate';
+
+  
+}
+
+function orcid_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+  
+  $orcid = $form_state->getValue('field_orcid')[0]['value']; // NON doveva già restituirlo con getValue()??? 
+  $errorMessageString = "Your ORCID ID doesn't seems correct. Please verify it and save again.";
+
+  // ORCID CORRECT FORMAT?
+  $pattern = "/([0-9]{4}[-]){3}[0-9]{3}[0-9X]/";
+  $check = preg_match($pattern, $orcid);
+  $isValidOrcid = true;
+
+  // validato se orcid è nullo (potrebbe non essere inserito)
+  if (!$check && $orcid != null){
+    $form_state->setErrorByName('field_orcid', $errorMessageString);
+    \Drupal::logger('ICTP member')->notice($form_state->getValue('title')[0]['value'].' | ORCID ID: Wrong format.');
+  } 
+
+
+  // VALID ORCID ID ?
+  if ($check){
+    // Ultimo carattere è un checksum da 0-9 oppure X maiuscolo se dal checksum esce 10
+    $c = new \Drupal\ictp_members\Controller\IctpMembersController;
+    $result = $c->checkOrcidCode($orcid);
+    if(!$result){
+      $isValidOrcid = false;
+      $form_state->setErrorByName('field_orcid', $errorMessageString);
+      \Drupal::logger('ICTP member')->notice($form_state->getValue('title')[0]['value'].' | ORCID ID: Not valid checksum.');
+    } 
+  }
+
+  // ORCID PERSON NAME/SURNAME matchs with MEMBER NAME/SURNAME? 
+  if ($check && $isValidOrcid){
+    $c = new \Drupal\ictp_members\Controller\IctpMembersController;
+    $result = $c->getProfileOrcid($orcid);
+    $orcidName = strtolower($result['name']['given-names']['value']);
+    $orcidSurname = strtolower($result['name']['family-name']['value']);
+    $memberName = strtolower($form_state->getValue('title')[0]['value']);
+
+    // Splitto il title di drupal (nome e congnome) in enne stringhe
+    // e provo a trovare nome/cognome in una delle due variabili sputate 
+    // dalla api di orcid relativa alla persona associata all'orcid id
+    $searchStr = explode(' ',$memberName);
+
+    $found = array();
+    foreach ( $searchStr as $a ) { 
+      if( strstr( $a, $orcidName)){ 
+        $found[] = $a." -> " . $orcidName;
+        break;
+      }
+    }
+    foreach ( $searchStr as $a ) { 
+      if( strstr( $a, $orcidSurname)){ 
+        $found[] = $a." -> " . $orcidSurname;
+        break;
+      }
+    }
+    //dump($found);
+
+    if(!$found){
+      // NOTA: ovviamente se ORCID ID è di un'altra persona che ha stesso nome o cognome, orcid viene validato....
+      $form_state->setErrorByName('field_orcid', 'ORCID ID: another person? ['.$orcidName.' '.$orcidSurname.']');
+      \Drupal::logger('ICTP member')->notice($form_state->getValue('title')[0]['value'].' | ORCID ID: Another person? '.$orcid);
+    } 
+
+  }
+  
+}
+
+/*
+function ictp_members_cron() {
+  //$result = \Drupal\ictp_members\Controller\IctpMembersController::add();
+  $c = new \Drupal\ictp_members\Controller\IctpMembersController;
+  $result = $c->add();
+  \Drupal::logger('ICTP cron')->notice('Import/update users | '.$result['#markup']);
+}
+*/
+
+

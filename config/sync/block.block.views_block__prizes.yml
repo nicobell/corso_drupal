@@ -1,0 +1,37 @@
+uuid: c6ed04fe-3ccd-496f-886e-6412458f888b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.prizes
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__prizes
+theme: ictp
+region: content
+weight: -41
+provider: null
+plugin: 'views_block:prizes-prizes'
+settings:
+  id: 'views_block:prizes-prizes'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
+  request_path:
+    id: request_path
+    negate: false
+    pages: '*/recognising-excellence'

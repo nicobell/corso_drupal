@@ -1,0 +1,28 @@
+uuid: 096e40f9-280d-482a-8854-f0cc78f64fc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_pages_related
+    - node.type.article
+id: node.article.field_ref_pages_related
+field_name: field_ref_pages_related
+entity_type: node
+bundle: article
+label: 'Related news'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

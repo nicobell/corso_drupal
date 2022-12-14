@@ -1,0 +1,33 @@
+uuid: ba50a107-3915-4718-893c-a12c9de7124c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.hero
+  module:
+    - node
+    - views
+  theme:
+    - ictp
+id: views_block__hero_block_1
+theme: ictp
+region: hero
+weight: -62
+provider: null
+plugin: 'views_block:hero-block_1'
+settings:
+  id: 'views_block:hero-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page

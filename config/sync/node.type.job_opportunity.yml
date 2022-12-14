@@ -1,0 +1,17 @@
+uuid: 2c8e9c5e-7812-4e14-be9a-7b4c133155b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Job Opportunity'
+type: job_opportunity
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

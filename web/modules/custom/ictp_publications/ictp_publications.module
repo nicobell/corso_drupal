@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @author Nicola Dimatteo <hello@nicoladimatteo.it>
+ * @link https://github.com/webnicola
+ */
+
+ /**
+ * @file
+ * Contains hooks implementations and helper functions for ictp_publications.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+const ORCID_END_POINT = 'https://pub.orcid.org/v3.0/';
+const ARXIV_END_POINT = 'https://arxiv.org/a/';
+const WORKS_CATEGORY = array(
+  "book", 
+  "book-chapter",
+  "journal-article",
+  "report"
+);
+
+ /**
+ * Implements hook_help().
+ */
+function ictp_publications_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ictp_indico module.
+    case 'help.page.ictp_publications':
+      $output = '';
+      $output .= '<h3>' . t('Publications Feeds') . '</h3>';
+      $output .= '<p>' . t('This module allows you to import publications from ORCID.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/*
+function ictp_publications_cron() {
+  $p = new \Drupal\ictp_publications\Controller\IctpPublicationsController;
+  $resultOrcid = $p->add();
+  $resultArxiv = $p->arxivAdd();
+
+  \Drupal::logger('ICTP cron')->notice('Import/update ORCID publications | '.$resultOrcid['#markup']);
+  \Drupal::logger('ICTP cron')->notice('Import/update ARXIV publications | '.$resultArxiv['#markup']);
+}
+*/
+
+

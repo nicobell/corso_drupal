@@ -1,0 +1,23 @@
+uuid: 13c9a1ef-8406-4fb7-a23d-a6176cc60fca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.prize
+  module:
+    - text
+id: node.prize.body
+field_name: body
+entity_type: node
+bundle: prize
+label: 'Long description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,21 @@
+uuid: 88f6f244-272b-4c66-8650-a3acd421f2e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_description
+    - node.type.prize
+  module:
+    - text
+id: node.prize.field_short_description
+field_name: field_short_description
+entity_type: node
+bundle: prize
+label: 'Short description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

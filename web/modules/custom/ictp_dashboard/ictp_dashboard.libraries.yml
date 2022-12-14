@@ -1,0 +1,5 @@
+dashboard:
+  version: 0.7
+  css:
+    theme:
+      css/common.css: {}

@@ -1,0 +1,30 @@
+uuid: e5a16a46-df84-49a3-9fdb-603aea9e3583
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d724aa0c-5b8c-4c5d-9441-23dcc5a0ec7e'
+  module:
+    - block_content
+    - system
+  theme:
+    - ictp
+id: visitictpheadericons
+theme: ictp
+region: content
+weight: -65
+provider: null
+plugin: 'block_content:d724aa0c-5b8c-4c5d-9441-23dcc5a0ec7e'
+settings:
+  id: 'block_content:d724aa0c-5b8c-4c5d-9441-23dcc5a0ec7e'
+  label: visit-ictp-header-icons
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home/visit-ictp

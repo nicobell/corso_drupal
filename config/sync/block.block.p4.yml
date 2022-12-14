@@ -1,0 +1,25 @@
+uuid: 288950ac-5370-497e-b24c-af6b16ab3357
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:visa_guide:1d6206ca-a03e-4b84-80de-d69a61860af0'
+  module:
+    - block_content
+  theme:
+    - ictp
+id: p4
+theme: ictp
+region: hidden_region
+weight: -38
+provider: null
+plugin: 'block_content:1d6206ca-a03e-4b84-80de-d69a61860af0'
+settings:
+  id: 'block_content:1d6206ca-a03e-4b84-80de-d69a61860af0'
+  label: P4
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

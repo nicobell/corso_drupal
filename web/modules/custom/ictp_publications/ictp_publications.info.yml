@@ -1,0 +1,7 @@
+name: "Publications import"
+type: module
+description: "Imports publications from ORCID (https://orcid.org/) to Drupal websites"
+core_version_requirement: ^9 || ^10
+package: "ICTP"
+version: 0.0.7
+configure: ictp_publications.work

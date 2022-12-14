@@ -1,0 +1,21 @@
+uuid: aac37904-b445-4992-a242-8df530a0cc22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.announcement
+  module:
+    - metatag
+id: node.announcement.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: announcement
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

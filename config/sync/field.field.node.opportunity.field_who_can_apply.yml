@@ -1,0 +1,21 @@
+uuid: 290aefcb-da66-4e0d-ad44-637a523debd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_who_can_apply
+    - node.type.opportunity
+  module:
+    - text
+id: node.opportunity.field_who_can_apply
+field_name: field_who_can_apply
+entity_type: node
+bundle: opportunity
+label: 'Who can apply'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

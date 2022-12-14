@@ -1,0 +1,22 @@
+uuid: 6bb3e303-7fa5-4b49-9162-b32ba431144f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.collaboration_group
+id: node.collaboration_group.promote
+field_name: promote
+entity_type: node
+bundle: collaboration_group
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

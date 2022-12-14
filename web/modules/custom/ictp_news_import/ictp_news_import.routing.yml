@@ -1,0 +1,27 @@
+ictp_news_import.home:
+  path: '/admin/news/home-import'
+  defaults:
+    _controller: '\Drupal\ictp_news_import\Controller\IctpNewsController::home'
+    _title: 'Home'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'administer content'
+ictp_news_import.import:
+  path: '/admin/news/import'
+  defaults:
+    _form: '\Drupal\ictp_news_import\Form\IctpNewsFormImport'
+    _title: 'ICTP Visa guide'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'
+ictp_news_import.delete:
+  path: '/admin/news/delete'
+  defaults:
+    _controller: '\Drupal\ictp_news_import\Controller\IctpNewsController::delete'
+    _title: 'Delete news'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'

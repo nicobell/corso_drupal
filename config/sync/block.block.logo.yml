@@ -1,0 +1,25 @@
+uuid: 74f6e191-c80f-497f-8964-cff9b20528bd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:57a22145-013c-41a0-9b46-123569028a46'
+  module:
+    - block_content
+  theme:
+    - ictp
+id: logo
+theme: ictp
+region: header
+weight: -66
+provider: null
+plugin: 'block_content:57a22145-013c-41a0-9b46-123569028a46'
+settings:
+  id: 'block_content:57a22145-013c-41a0-9b46-123569028a46'
+  label: Logo
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

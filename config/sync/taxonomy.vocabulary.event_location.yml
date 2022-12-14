@@ -1,0 +1,8 @@
+uuid: 2bcbe850-0d67-4d5f-bd55-190f093a319f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event location'
+vid: event_location
+description: ''
+weight: 0

@@ -1,0 +1,21 @@
+uuid: c6dd55bc-f492-47f3-9949-43f326522cb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.prize
+  module:
+    - metatag
+id: node.prize.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: prize
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

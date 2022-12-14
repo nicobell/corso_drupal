@@ -1,0 +1,8 @@
+@media only print{
+  .visa-guide #print,
+  .visa-guide footer,
+  .visa-guide header {
+    display: none !important;
+    color: red !important;
+  }
+}

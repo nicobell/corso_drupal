@@ -1,0 +1,32 @@
+uuid: b96c6ac7-56c5-46b1-b93f-3a7ef85c97c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.announcement
+    - node.type.member
+    - node.type.teaching_material
+    - node.type.video
+  module:
+    - node
+    - system
+    - toolbar
+id: member
+label: Member
+weight: 4
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'create announcement content'
+  - 'create member content'
+  - 'create teaching_material content'
+  - 'create video content'
+  - 'delete own announcement content'
+  - 'delete own teaching_material content'
+  - 'delete own video content'
+  - 'edit own announcement content'
+  - 'edit own member content'
+  - 'edit own teaching_material content'
+  - 'edit own video content'
+  - 'view own unpublished content'
+  - 'view the administration theme'

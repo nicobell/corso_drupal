@@ -1,0 +1,19 @@
+uuid: ed36a2a2-6c90-406c-99b0-b798b29fb3e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_seating_capacity
+    - node.type.room
+id: node.room.field_room_seating_capacity
+field_name: field_room_seating_capacity
+entity_type: node
+bundle: room
+label: 'Room seating capacity'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

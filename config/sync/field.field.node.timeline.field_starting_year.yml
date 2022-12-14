@@ -1,0 +1,23 @@
+uuid: a30da6d1-d251-46a6-9614-96604520aa85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_starting_year
+    - node.type.timeline
+id: node.timeline.field_starting_year
+field_name: field_starting_year
+entity_type: node
+bundle: timeline
+label: 'Starting year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1920
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

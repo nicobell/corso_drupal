@@ -1,0 +1,25 @@
+uuid: 19bfde96-a243-458b-8c49-71ac6f247e8a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:539e72ed-5a96-449a-8511-78360e87b93f'
+  module:
+    - block_content
+  theme:
+    - ictp
+id: ictp_joinournewsletter
+theme: ictp
+region: footer_2
+weight: -46
+provider: null
+plugin: 'block_content:539e72ed-5a96-449a-8511-78360e87b93f'
+settings:
+  id: 'block_content:539e72ed-5a96-449a-8511-78360e87b93f'
+  label: 'Join our newsletter'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,6 @@
+ictp_members.home:
+  title: 'Members import'
+  description: 'Members import actions'
+  route_name: ictp_members.home
+  parent: 'system.admin_config_services'
+  weight: -99

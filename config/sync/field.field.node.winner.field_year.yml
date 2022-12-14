@@ -1,0 +1,23 @@
+uuid: dcae7cdd-30db-4a8b-8506-56670f3d69e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.winner
+id: node.winner.field_year
+field_name: field_year
+entity_type: node
+bundle: winner
+label: Year
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1964
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

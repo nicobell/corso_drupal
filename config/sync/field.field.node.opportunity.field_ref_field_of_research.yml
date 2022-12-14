@@ -1,0 +1,29 @@
+uuid: d66202b8-1d0a-4764-8c90-6f65372febe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_field_of_research
+    - node.type.field_of_research
+    - node.type.opportunity
+id: node.opportunity.field_ref_field_of_research
+field_name: field_ref_field_of_research
+entity_type: node
+bundle: opportunity
+label: 'Field of research'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      field_of_research: field_of_research
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

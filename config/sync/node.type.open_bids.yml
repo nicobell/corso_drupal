@@ -1,0 +1,17 @@
+uuid: 209b4dcb-5eb7-40b7-b109-6f1fea3196d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Open Bids'
+type: open_bids
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

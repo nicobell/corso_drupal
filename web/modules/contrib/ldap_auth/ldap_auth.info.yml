@@ -1,0 +1,35 @@
+name: 'Active Directory Integration / LDAP Integration - NTLM & Kerberos Login'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+description: 'Drupal LDAP / Active Directory Integration module allows your users to log in to your Drupal site using their LDAP / AD credentials. In addition to LDAP, this module also allows you to log in using NTLM and Kerberos'
+configure: ldap_auth.ldap_config
+# Information added by Drupal.org packaging script on 2021-01-12
+# version: '8.x-1.21'
+# project: 'ldap_auth'
+# datestamp: 1610494654
+
+# Information added by Drupal.org packaging script on 2021-02-05
+# version: '8.x-1.23'
+# project: 'ldap_auth'
+# datestamp: 1612511572
+
+# Information added by Drupal.org packaging script on 2021-04-12
+# version: '8.x-1.24'
+# project: 'ldap_auth'
+# datestamp: 1618207012
+
+# Information added by Drupal.org packaging script on 2021-07-12
+# version: '8.x-1.25'
+# project: 'ldap_auth'
+# datestamp: 1626089744
+
+# Information added by Drupal.org packaging script on 2021-11-29
+# version: '8.x-1.26'
+# project: 'ldap_auth'
+# datestamp: 1662709952
+
+# Information added by Drupal.org packaging script on 2022-10-13
+version: '8.x-1.32'
+project: 'ldap_auth'
+datestamp: 1665658475

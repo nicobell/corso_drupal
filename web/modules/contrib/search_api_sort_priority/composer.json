@@ -1,0 +1,24 @@
+{
+  "name": "drupal/search_api_sort_priority",
+  "description": "Search API Sort Priority functionality.",
+  "type": "drupal-module",
+  "homepage": "http://drupal.org/project/search_api_sort_priority",
+  "authors": [
+    {
+      "name": "See contributors",
+      "homepage": "https://www.drupal.org/node/2873488/committers"
+    }
+  ],
+  "support": {
+    "issues": "http://drupal.org/project/search_api_sort_priority"
+  },
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "extra": {
+    "drush": {
+      "services": {
+        "drush.services.yml": "^9 || ^10"
+      }
+    }
+  }
+}

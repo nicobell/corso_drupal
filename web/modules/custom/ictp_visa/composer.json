@@ -1,0 +1,19 @@
+{
+    "name": "drupal/ictp-visa",
+    "description": "Defines a set of re-usable patterns for the ICTP Drupal infrastructure",
+    "version": "0.0.7",
+    "type": "drupal-custom-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+      {
+        "name": "Nicola Dimatteo",
+        "email": "git@nicoladimatteo.it"
+      }
+    ],
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://packages.drupal.org/9"
+      }
+    ]
+  }

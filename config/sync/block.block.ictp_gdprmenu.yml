@@ -1,0 +1,31 @@
+uuid: adbf6b0a-3669-4469-8943-f3039298cfb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.gdpr-menu
+  module:
+    - menu_block
+  theme:
+    - ictp
+id: ictp_gdprmenu
+theme: ictp
+region: footer_6
+weight: -46
+provider: null
+plugin: 'menu_block:gdpr-menu'
+settings:
+  id: 'menu_block:gdpr-menu'
+  label: 'GDPR menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: true
+  parent: 'gdpr-menu:'
+  suggestion: gdpr_menu
+visibility: {  }

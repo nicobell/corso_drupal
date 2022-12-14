@@ -1,0 +1,29 @@
+uuid: ca3b436b-de7e-43ce-b0ff-fa0cf9e4c500
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_sections
+    - node.type.publication
+    - taxonomy.vocabulary.section
+id: node.publication.field_ref_sections
+field_name: field_ref_sections
+entity_type: node
+bundle: publication
+label: Sections
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      section: section
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

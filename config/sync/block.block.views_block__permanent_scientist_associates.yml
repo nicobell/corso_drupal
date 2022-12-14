@@ -1,0 +1,30 @@
+uuid: b4ea7854-7144-4fb1-8bf4-b45db532f8a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.permanent_scientist
+  module:
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__permanent_scientist_associates
+theme: ictp
+region: content
+weight: -28
+provider: null
+plugin: 'views_block:permanent_scientist-associates'
+settings:
+  id: 'views_block:permanent_scientist-associates'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '*/people'

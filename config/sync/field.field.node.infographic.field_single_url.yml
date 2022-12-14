@@ -1,0 +1,23 @@
+uuid: 76eb84a3-5207-4149-a7f5-3aaee3f1942e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_single_url
+    - node.type.infographic
+  module:
+    - link
+id: node.infographic.field_single_url
+field_name: field_single_url
+entity_type: node
+bundle: infographic
+label: 'Link to page'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

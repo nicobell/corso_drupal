@@ -1,0 +1,8 @@
+uuid: f2d178fd-3075-431a-93ac-a691ed10cabb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Infographic group type'
+vid: infographic_group_type
+description: ''
+weight: 0

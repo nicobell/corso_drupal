@@ -1,0 +1,8 @@
+uuid: 71969dc0-f90e-46fe-a0f5-8751d7b658e7
+langcode: en
+status: true
+dependencies: {  }
+id: personal-page
+label: 'Personal Page'
+description: 'Menu per gli utenti con la personal page'
+locked: false

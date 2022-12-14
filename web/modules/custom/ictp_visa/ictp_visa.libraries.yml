@@ -1,0 +1,11 @@
+visa-guide:
+  css:
+    component:
+      css/form.css: {}
+      css/print.css: { media: print }
+  js:
+    js/step.js: {}
+    js/print.js: {}
+
+  dependencies:
+     - core/drupal

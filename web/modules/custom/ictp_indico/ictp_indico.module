@@ -1,0 +1,111 @@
+<?php
+
+/**
+ * @author Nicola Dimatteo <hello@nicoladimatteo.it>
+ * @link https://github.com/webnicola
+ */
+
+ /**
+ * @file
+ * Contains hooks implementations and helper functions for ictp_indico.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+const INDICO_URL = 'https://indico.ictp.it';
+const END_POINT = '/export/conference/search.json?where=all&category=';
+
+ /**
+ * Implements hook_help().
+ */
+function ictp_indico_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ictp_indico module.
+    case 'help.page.ictp_indico':
+      $output = '';
+      $output .= '<h3>' . t('Indico Feeds') . '</h3>';
+      $output .= '<p>' . t('This module allows you to import events from Indico.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+function ictp_indico_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+ 
+  // Download Image by indico code
+  if ($entity->bundle() == 'collaboration') {
+    $ictp_logo_code = $entity->field_collaboration_logo_code->value;
+    $have_to_import = $entity->field_ictp_logo_import->value;
+
+    if ($have_to_import){
+
+      $baseurl = "https://indico.ictp.it/css/ICTP/images/sponsor-logo/";
+      $data = file_get_contents('https://indico.ictp.it/admin/plugins/type/ictp_addons/sponsor_management/export_dictionary');
+      $json = json_decode($data,true);
+
+      // Cerco il codice nel json di tutti i loghi Indico
+      if (trim($ictp_logo_code) != ''){
+        foreach ( $json['info'] as $row ) {  
+            if ($row['name'] == trim($ictp_logo_code)) { 
+              $file = file_save_data(file_get_contents($baseurl.$row['logo']), 'public://images/logos/'.basename($row['logo']), \Drupal\Core\File\FileSystemInterface::EXISTS_REPLACE);
+              $file->setPermanent();
+              $file->status = 1;
+              if (!empty($file)) { 
+                $file_arr = array(
+                  "target_id" => $file->id(),
+                  "alt" => $row['title'],
+                  "title" => $row['title']
+                );       
+                 
+                $entity->field_image = $file_arr;
+                $entity->field_ictp_logo_import->value = false; // Torno a settare il booleano dell'import a false
+              }
+              break;
+            }
+        }
+ 
+      } 
+    }  
+  }
+
+  if($entity->bundle() === 'section') {
+    if($entity->get('field_indico_keywords')->value){
+      $config = \Drupal::service('config.factory')
+      ->getEditable('ictp_indico.settings');
+      $section = $entity->get('field_section_acronym')->value;
+      $item = $entity->get('field_indico_keywords')->value;
+      $config->set($section.'.keywords', hash('sha256', $item));
+      $config->save();
+    }
+    if($entity->get('field_indico_topic')->value){
+      $config = \Drupal::service('config.factory')
+      ->getEditable('ictp_indico.settings');
+      $section = $entity->get('field_section_acronym')->value;
+      $item = $entity->get('field_indico_topic')->value;
+      $config->set($section.'.topics', hash('sha256', $item));
+      $config->save();
+    }
+  }
+} 
+
+
+function ictp_indico_form_node_event_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['title']['#disabled'] = true;
+  $form['body']['#disabled'] = true;
+  $form['field_end_date']['#disabled'] = true;
+  $form['field_start_date']['#disabled'] = true;
+  $form['field_start_time']['#disabled'] = true;
+  $form['field_end_time']['#disabled'] = true;
+  $form['field_ref_section']['#disabled'] = true;
+  $form['field_ref_sections']['#disabled'] = true;
+  $form['field_ref_event_location']['#disabled'] = true;
+  $form['field_topic']['#disabled'] = true;
+  $form['field_event_deadline']['#disabled'] = true;
+  $form['field_hosted_activities']['#disabled'] = true;
+  $form['field_ictp_activities_outside']['#disabled'] = true;
+  $form['field_event_type']['#disabled'] = true;
+}
+
+

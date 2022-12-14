@@ -1,0 +1,73 @@
+uuid: 237fd832-1fdf-45f9-a365-e7357b1c0c49
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.related_content
+    - field.field.node.page.body
+    - field.field.node.page.field_attachments
+    - field.field.node.page.field_highlight_first_related
+    - field.field.node.page.field_image
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_page_subtitle
+    - field.field.node.page.field_ref_charts
+    - field.field.node.page.field_ref_page_next
+    - field.field.node.page.field_ref_pages_related
+    - field.field.node.page.field_ref_section
+    - field.field.node.page.field_thumbnail_description
+    - field.field.node.page.field_thumbnail_image
+    - image.style.big_thumbnail
+    - node.type.page
+  module:
+    - svg_image
+    - text
+    - user
+_core:
+  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
+id: node.page.related_content
+targetEntityType: node
+bundle: page
+mode: related_content
+content:
+  body:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 250
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_thumbnail_description:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_thumbnail_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: big_thumbnail
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_attachments: true
+  field_highlight_first_related: true
+  field_image: true
+  field_meta_tags: true
+  field_page_subtitle: true
+  field_ref_charts: true
+  field_ref_page_next: true
+  field_ref_pages_related: true
+  field_ref_section: true
+  links: true
+  search_api_excerpt: true
+  sharing_buttons: true

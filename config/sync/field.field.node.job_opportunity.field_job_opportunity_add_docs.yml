@@ -1,0 +1,21 @@
+uuid: 74d9e3e1-6afe-4aee-8e32-ac682ed10b5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_opportunity_add_docs
+    - node.type.job_opportunity
+  module:
+    - text
+id: node.job_opportunity.field_job_opportunity_add_docs
+field_name: field_job_opportunity_add_docs
+entity_type: node
+bundle: job_opportunity
+label: 'Additional documentation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

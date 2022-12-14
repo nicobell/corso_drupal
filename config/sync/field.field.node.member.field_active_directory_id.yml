@@ -1,0 +1,19 @@
+uuid: b3ba494a-1dc3-4d65-bda4-35f8a5a9a0ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_active_directory_id
+    - node.type.member
+id: node.member.field_active_directory_id
+field_name: field_active_directory_id
+entity_type: node
+bundle: member
+label: 'Active Directory ID'
+description: 'This information is managed by ICTP phonebook administrators. Please contact them for any issues.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

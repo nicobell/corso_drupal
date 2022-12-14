@@ -1,0 +1,38 @@
+uuid: ec226da7-0c6f-4193-8b0c-aa76611bc27c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_thumbnail_image
+    - node.type.article
+  module:
+    - image
+id: node.article.field_thumbnail_image
+field_name: field_thumbnail_image
+entity_type: node
+bundle: article
+label: Thumbnail
+description: 'This image appears in the related tile.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: images/news
+  file_extensions: 'png jpg jpeg'
+  max_filesize: '2 MB'
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 17c4c175-c8b3-4f71-8ec7-6d97a239d487
+    alt: ICTP
+    title: ''
+    width: 752
+    height: 602
+field_type: image

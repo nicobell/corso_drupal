@@ -1,0 +1,29 @@
+uuid: 34876572-bb30-4df8-a7ab-17f976ebd885
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_sections
+    - node.type.member
+    - taxonomy.vocabulary.section
+id: node.member.field_ref_sections
+field_name: field_ref_sections
+entity_type: node
+bundle: member
+label: Sections
+description: 'This information is managed by ICTP phonebook administrators. Please contact them for any issues.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      section: section
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

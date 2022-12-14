@@ -1,0 +1,64 @@
+<?php
+/**
+ * @author Nicola Dimatteo <hello@nicoladimatteo.it>
+ * @link https://github.com/webnicola
+ */
+
+ use \Drupal\Core\Form\FormStateInterface;
+
+/**
+ * @see hook_theme
+ */
+function ictp_visa_theme($existing, $type, $theme, $path) {
+  return [
+    'visa_guide' => [
+      'variables' => ['form' => NULL],
+    ],
+    'visa_guide_answers' => [
+      'variables' => ['answers' => NULL],
+    ],
+  ];
+}
+/**
+ *
+ * @see hook_form_BASE_FORM_ID_alter()
+ * @see hook_form_FORM_ID_alter()
+ */
+function ictp_visa_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['#id']) && $form['#id'] != 'node-visa-interactive-guide-form') {
+    return;
+  }
+  $form['actions']['submit']['#value'] = 'NEXT';
+  $form['actions']['submit']['#submit'] = ['ictp_visa_guide_handler'];
+
+}
+/**
+ * {@inheritdoc}
+ */
+function ictp_visa_guide_handler(array $form, FormStateInterface $form_state) {
+  // dump($form_state->getValues('field_visa_family_members'));
+  $values = $form_state->cleanValues()->getValues();
+
+  /**
+   * sanitize data
+   */
+  $fields = array_filter($values, function($key) {
+    return $key == str_contains($key, 'field');
+  }, ARRAY_FILTER_USE_KEY);
+  // dump($fields);
+  // TODO check 'value'
+  foreach($fields as $key => $field) {
+    $fields[$key] = array_key_exists('value', $fields[$key])
+      ? $fields[$key]['value']
+      : $fields[$key][0]['value'];
+  }
+
+
+
+  $tempstore = \Drupal::service('tempstore.private');
+  $store = $tempstore->get('ictp_visa');
+  $store->set('guida', $fields);
+
+  $url = \Drupal\Core\Url::fromUri('base:/home/visa/guide');
+  $form_state->setRedirectUrl($url);
+}

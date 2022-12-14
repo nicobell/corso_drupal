@@ -1,0 +1,12 @@
+uuid: d4b4315d-bf27-42b5-b931-bc2a7e6f964c
+langcode: en
+status: true
+dependencies: {  }
+label: 'Room and Building'
+id: room_and_building
+description: ''
+aspect_ratio: '16:9'
+soft_limit_width: 900
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

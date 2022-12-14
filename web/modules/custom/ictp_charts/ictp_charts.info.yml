@@ -1,0 +1,8 @@
+name: "ICTP Charts"
+type: module
+description: "Charts ovveride"
+core_version_requirement: ^9.2 || ^10
+package: "ICTP"
+version: 0.0.7
+dependencies:
+  - charts:charts

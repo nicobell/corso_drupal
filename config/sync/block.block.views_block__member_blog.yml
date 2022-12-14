@@ -1,0 +1,25 @@
+uuid: 59faadf7-1657-4e9c-b862-b0b5971716e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.member
+  module:
+    - views
+  theme:
+    - ictp
+id: views_block__member_blog
+theme: ictp
+region: hidden_region
+weight: -63
+provider: null
+plugin: 'views_block:member-blog'
+settings:
+  id: 'views_block:member-blog'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility: {  }

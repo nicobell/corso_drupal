@@ -1,0 +1,29 @@
+uuid: 1a4b1475-d1b2-40e2-9365-1a8be3930906
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__news_block_4
+theme: ictp
+region: content
+weight: -54
+provider: null
+plugin: 'views_block:news-block_4'
+settings:
+  id: 'views_block:news-block_4'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home/news

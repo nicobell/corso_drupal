@@ -1,0 +1,38 @@
+uuid: 3036ca71-c918-4ff1-8b51-4222351587f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.projects
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__projects_by_section
+theme: ictp
+region: hidden_region
+weight: -66
+provider: null
+plugin: 'views_block:projects-block_1'
+settings:
+  id: 'views_block:projects-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
+  request_path:
+    id: request_path
+    negate: false
+    pages: '*/topics-and-projects'

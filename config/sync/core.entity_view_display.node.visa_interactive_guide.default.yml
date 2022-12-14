@@ -1,0 +1,62 @@
+uuid: a2263c99-d000-474a-a81e-0ffceecd424e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.visa_interactive_guide.field_visa_family_members
+    - field.field.node.visa_interactive_guide.field_visa_length_stay
+    - field.field.node.visa_interactive_guide.field_visa_type_visit
+    - field.field.node.visa_interactive_guide.field_visa_who_are_you
+    - node.type.visa_interactive_guide
+  module:
+    - options
+    - user
+id: node.visa_interactive_guide.default
+targetEntityType: node
+bundle: visa_interactive_guide
+mode: default
+content:
+  field_visa_family_members:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_visa_length_stay:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_visa_type_visit:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_visa_who_are_you:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

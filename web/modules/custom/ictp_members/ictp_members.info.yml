@@ -1,0 +1,7 @@
+name: "Members import"
+type: module
+description: "Imports members from ICTP phonebook (https://www.ictp.it/phonebook) to Drupal websites"
+core_version_requirement: ^9 || ^10
+package: "ICTP"
+version: 0.0.3
+configure: ictp_members.home

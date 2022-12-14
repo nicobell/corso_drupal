@@ -1,0 +1,20 @@
+uuid: b5e30b6d-ddbd-411c-8c89-f24ec666f0f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_prize_catchphrase
+field_name: field_prize_catchphrase
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

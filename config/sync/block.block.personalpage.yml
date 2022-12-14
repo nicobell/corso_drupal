@@ -1,0 +1,39 @@
+uuid: f1bd039d-1509-45f0-9a3a-b75eb74950e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.personal-page
+  module:
+    - menu_block
+    - user
+  theme:
+    - mediteran
+id: personalpage
+theme: mediteran
+region: content
+weight: -4
+provider: null
+plugin: 'menu_block:personal-page'
+settings:
+  id: 'menu_block:personal-page'
+  label: 'Personal Page'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'personal-page:'
+  suggestion: personal_page
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      member: member

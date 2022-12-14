@@ -1,0 +1,19 @@
+uuid: 81209446-9a8e-425c-a470-ea283b0782cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sync_id
+    - node.type.member
+id: node.member.field_sync_id
+field_name: field_sync_id
+entity_type: node
+bundle: member
+label: sync_id
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

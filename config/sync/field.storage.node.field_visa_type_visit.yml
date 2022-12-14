@@ -1,0 +1,33 @@
+uuid: c7a7f72e-c789-46af-af69-5c5106578cd8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_visa_type_visit
+field_name: field_visa_type_visit
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Scientific Activity'
+    -
+      value: '2'
+      label: 'Short-term/long-term visits'
+    -
+      value: '3'
+      label: Associate
+    -
+      value: '4'
+      label: Programme
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

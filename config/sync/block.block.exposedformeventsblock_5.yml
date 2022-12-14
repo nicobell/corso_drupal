@@ -1,0 +1,28 @@
+uuid: 316d0d65-8195-4d35-807b-aba493c3f0e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - system
+    - views
+  theme:
+    - ictp
+id: exposedformeventsblock_5
+theme: ictp
+region: content
+weight: -34
+provider: null
+plugin: 'views_exposed_filter_block:events-block_5'
+settings:
+  id: 'views_exposed_filter_block:events-block_5'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home/ictp-events-archive

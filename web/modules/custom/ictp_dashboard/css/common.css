@@ -1,0 +1,264 @@
+/* Custom styles for Dashboard */
+
+
+:root {
+    /*PRIMARY COLORS*/
+    --blue: #08447a;
+  
+    /*SECTIONS COLORS*/
+    --hecap: #FCAC48;
+    --cmsp: #0C7379;
+    --math: #00A0C9;
+    --esp: #9E2F5D;
+    --sti: #005DE0;
+    --qls: #8C933C;
+  
+    --hecap-lighter: #FCAC48;
+    --cmsp-lighter: #2bb9c0;
+    --math-lighter: #14b3db;
+    --esp-lighter: #c64279;
+    --sti-lighter: #166adf;
+    --qls-lighter: #a6ae4a;
+  
+    /*THIRD COLORS*/
+    --light_gray: #F4F7F6;
+    --border_gray: #E0E0E0;
+    --medium_gray: #999999;
+    --text_color: #3D4347;
+  }
+  
+  /*MISCELLANEOUS*/
+  .blue {
+    color: var(--blue);
+  }
+  
+  .blue:hover {
+    color: #000;
+    transition: 0.2s ease;
+  }
+  
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: inline-block;
+        opacity: 0;
+    }
+
+    100% {
+        display: inline-block;
+        opacity: 1;
+    }
+}
+  
+/*
+* -------------------------------------------------
+* BUTTONS
+* -------------------------------------------------
+*/
+
+
+.dashboard_btn
+{
+    background-color: white;
+    padding: 6px 12px;
+    color:#555; 
+    border-radius: 50px;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    border: 0px;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    min-width:160px;
+    max-width: 220px;
+    text-align: left;
+    white-space: nowrap;
+    border: 1px solid;
+    border-color: #d8d8d8;
+    background-image: url(icon-arrow-next-page.svg);
+    background-repeat: no-repeat;
+    background-position: 93%;
+    transition: 0.3s ease;
+    
+}
+
+
+.dashboard_btn:hover
+{
+  background-color: #e8e8e8;
+  color:#333;
+  text-decoration: none;
+  border-color: #e8e8e8; 
+}
+
+
+
+
+
+.small
+{
+    text-transform: lowercase;
+    font-size: 0.75rem;
+    padding:4px 10px;
+    min-width:100px;
+    max-width: 100px;
+}
+
+.littlebtn
+{
+    background: #6AB448;
+    padding: 2px 4px;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+/*
+* -------------------------------------------------
+* Quadretti sezione (ref singolo)
+* -------------------------------------------------
+*/
+.bigsec
+{
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height:2.5rem;
+    text-align:center;
+    font-size:0.7rem;
+    text-transform: uppercase;
+    color:white;
+}
+.home
+{
+    background-color: #f5f5f5;
+    color:#1D4B95;
+}
+.hecap
+{
+    background-color: var(--hecap);
+}
+.cmsp
+{
+    background-color: var(--cmsp);
+}
+.sti
+{
+    background-color: var(--sti);
+}
+.math
+{
+    background-color: var(--math);
+}
+.qls
+{
+    background-color: var(--qls);
+}
+.esp
+{
+    background-color: var(--esp);
+}
+
+/*
+* -------------------------------------------------
+* Quadretti sezione (se ref multiplo)
+* -------------------------------------------------
+*/
+
+.minisec
+{
+    display: block;
+    float:left;
+    width: 16px;
+    height: 16px;
+    position:relative;
+    margin-right:2px;
+}
+
+.minisec p{
+    display:block;
+    opacity: 0;
+    position:absolute;
+    font-size:10px;
+    top:10px;
+    white-space: nowrap;
+    transform: translateX(calc(-50% + 8px));
+
+}
+
+.minisec:hover p{
+    animation-fill-mode: forwards;
+    animation: fadeInFromNone 0.9s ;
+}
+
+.sec_1
+{
+    background-color: #f5f5f5;
+    border: 2px solid #1D4B95;
+}
+.sec_2
+{
+    background-color: var(--hecap);
+}
+.sec_3
+{
+    background-color: var(--cmsp);
+}
+.sec_4
+{
+    background-color: var(--sti);
+}
+.sec_5
+{
+    background-color: var(--math);
+}
+.sec_6
+{
+    background-color: var(--qls);
+}
+.sec_7
+{
+    background-color: var(--esp);
+}
+.sec_8
+{
+    background-color:#eee;
+}
+
+
+
+
+
+
+
+
+/* FIX mediterean theme */
+.form-select {
+    min-width: auto !important;
+    width: 100% !important;
+}
+
+.mr
+{
+    margin-right:10px !important;
+}
+
+td.views-field.views-field-operations
+{
+    width:150px;
+}
+
+td.fix200
+{
+    width:200px;
+}
+
+td.fix100
+{
+    width:100px;
+}

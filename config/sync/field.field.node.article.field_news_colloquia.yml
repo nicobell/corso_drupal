@@ -1,0 +1,23 @@
+uuid: a4cb9a37-30d9-4e3c-8630-560c16ab2792
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_colloquia
+    - node.type.article
+id: node.article.field_news_colloquia
+field_name: field_news_colloquia
+entity_type: node
+bundle: article
+label: 'Bind To Colloquia'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,6 @@
+name: "Topic"
+type: module
+description: "ICTP Topic"
+core_version_requirement: ^9 || ^10
+package: "ICTP"
+version: 0.0.7

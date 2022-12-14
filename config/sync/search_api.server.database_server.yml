@@ -1,0 +1,14 @@
+uuid: 3f457761-29b9-4013-acb6-8354145a1953
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: database_server
+name: 'Database Server'
+description: 'Default database server created by Interfase'
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words

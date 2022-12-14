@@ -1,0 +1,21 @@
+uuid: fc2fd7da-f43f-4e22-8444-760d45ce004e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visa_type_visit
+    - node.type.visa_interactive_guide
+  module:
+    - options
+id: node.visa_interactive_guide.field_visa_type_visit
+field_name: field_visa_type_visit
+entity_type: node
+bundle: visa_interactive_guide
+label: 'Type of visit'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

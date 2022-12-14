@@ -1,0 +1,8 @@
+uuid: 17a61145-f296-4535-b180-72e68c7c1cd5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Bid status'
+vid: bid_status
+description: ''
+weight: 0

@@ -1,0 +1,8 @@
+uuid: 125ad061-55fc-4f0c-b92c-379dd749982b
+langcode: en
+status: true
+dependencies: {  }
+id: gdpr-menu
+label: 'GDPR menu'
+description: ''
+locked: false

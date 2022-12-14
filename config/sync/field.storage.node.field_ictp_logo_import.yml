@@ -1,0 +1,18 @@
+uuid: d30202ce-9ef7-49e0-ad72-47e5dfbe8ad5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ictp_logo_import
+field_name: field_ictp_logo_import
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

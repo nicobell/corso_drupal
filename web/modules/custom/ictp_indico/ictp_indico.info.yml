@@ -1,0 +1,7 @@
+name: "Indico import"
+type: module
+description: "Imports events from Indico website (https://indico.ictp.it) to Drupal websites"
+core_version_requirement: ^9 || ^10
+package: "ICTP"
+version: 0.0.7
+configure: ictp_indico.events

@@ -1,0 +1,38 @@
+uuid: 47bb7056-208d-49e0-afbb-75e376c9e94d
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.collaboration
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__collaboration_by_section
+theme: ictp
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:collaboration-collaboration_by_section'
+settings:
+  id: 'views_block:collaboration-collaboration_by_section'
+  label: Collaborations
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: Collaborations
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
+  request_path:
+    id: request_path
+    negate: false
+    pages: '*/collaborations'

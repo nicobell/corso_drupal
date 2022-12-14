@@ -1,0 +1,21 @@
+uuid: b2ea2963-0cb1-4a68-b445-d9242e95e4db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.collaboration_group
+  module:
+    - text
+id: node.collaboration_group.field_description
+field_name: field_description
+entity_type: node
+bundle: collaboration_group
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,6 @@
+name: "News import"
+type: module
+description: "News import from Umbraco"
+core_version_requirement: ^9 || ^10
+package: "ICTP"
+version: 0.0.7

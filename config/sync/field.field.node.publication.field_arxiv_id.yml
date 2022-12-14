@@ -1,0 +1,19 @@
+uuid: 0ec45a37-e30e-4514-934b-ef577bad6e59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_arxiv_id
+    - node.type.publication
+id: node.publication.field_arxiv_id
+field_name: field_arxiv_id
+entity_type: node
+bundle: publication
+label: 'arxiv id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

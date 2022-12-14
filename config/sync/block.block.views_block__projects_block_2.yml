@@ -1,0 +1,30 @@
+uuid: 77dd041f-5535-4181-97fe-6876a6601754
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.projects
+  module:
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__projects_block_2
+theme: ictp
+region: content
+weight: -56
+provider: null
+plugin: 'views_block:projects-block_2'
+settings:
+  id: 'views_block:projects-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '*/research-areas'

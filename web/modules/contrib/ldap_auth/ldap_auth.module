@@ -1,0 +1,143 @@
+<?php
+/**
+ * @file
+ * Module file for miniOrange ldap Module.
+ */
+
+use Drupal\ldap_auth\LDAPFlow;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\user\Entity\User;
+use Drupal\Component\Utility\Html;
+use Drupal\ldap_auth\LDAPLOGGERS;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Symfony\Component\HttpFoundation\Response;
+use Drupal\ldap_auth\Utilities;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function ldap_auth_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    case 'help.page.ldap_auth':
+      $url = Url::fromRoute('user.admin_index')->toString();
+      $moduleLink = $url . '/ldap_auth/ldap_config';
+
+      $moduleLandingPage = 'https://plugins.miniorange.com/drupal-ldap';
+      $setup_guides = 'https://plugins.miniorange.com/guide-to-configure-ldap-ad-integration-module-for-drupal';
+
+      $output = '';
+      $output .= '<h3>' . t('About <a target="_blank" href="' . $moduleLandingPage . '">[Know more]</a>') . '</h3>';
+      $output .= '<p>' . t('Drupal LDAP / Active Directory Integration module allows your users to log in to your Drupal site using their LDAP / AD credentials. In addition to LDAP, this module also allows you to log in using NTLM and Kerberos') . '</p>';
+      $output .= '<h3>' . t('Configuration') . '</h3>';
+      $output .= '<p>' . t('Configure miniOrange LDAP Login module under Configuration » <a target = "_blank" href=" ' . $url . ' ">People</a> » <a target = "_blank" href=" ' . $moduleLink . ' ">miniOrange LDAP Login</a>') . '</p>';
+      $output .= '<p>
+
+                        </p>';
+      $output .= '<h3>' . t('Setup Guides') . '</h3>';
+      $output .= '<p>' . t('Please click on the link <a target="_blank" href="'.$setup_guides.'"><strong>here</strong></a> to setup the module with the LDAP server .') . '</p>';
+
+      return $output;
+  }
+}
+
+/**
+* Implements hook_form_alter().
+*/
+
+function ldap_auth_form_alter(&$form,&$form_state,$form_id){
+	global $base_url;
+  $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
+  $module_link = \Drupal::request()->getRequestUri();
+	$login_with_ldap = \Drupal::config('ldap_auth.settings')->get('miniorange_ldap_enable_ldap');
+
+	if(!\Drupal::currentUser()->isAuthenticated()){
+		if ($form_id == 'user_login_block' || $form_id == 'user_login' || $form_id == 'user_login_form') {
+			if($login_with_ldap){
+				array_unshift($form['#validate'],'ldap_auth_form_alter_submit');
+			}
+		}
+	}
+}
+
+function ldap_auth_form_alter_submit(&$form, &$form_state){
+	global $base_url;
+	$username = Html::escape($_POST['name']);
+	$password = $_POST['pass'];
+	\Drupal::logger('ldap_auth')->notice('L1: Got control' );
+  $ldap_connect = new LDAPFlow();
+  $auth_response = $ldap_connect->ldap_login($username, $password);
+	LDAPLOGGERS::addLogger('L2: Auth Response Status: ',$auth_response->statusMessage);
+	LDAPLOGGERS::addLogger('L3: Complete Auth Response: ',$auth_response);
+
+	\Drupal::configFactory()->getEditable('ldap_auth.settings')->set('miniorange_ldap_drupal_login',$auth_response->statusMessage )->save();
+
+  if ($auth_response->statusMessage == 'SUCCESS') {
+    $account = user_load_by_name($username);
+    LDAPLOGGERS::addLogger('L4: Loading account using username: ', $username);
+    \Drupal::configFactory()->getEditable('ldap_auth.settings')->set('miniorange_ldap_drupal_login', 'Successfull Response from the Server')->save();
+    /**
+     * loading account using email address if account is not loaded by username
+     */
+    if (empty($account)) {
+      LDAPLOGGERS::addLogger('L5: Trying to load account in Drupal using email: ');
+      $email = $auth_response->profileAttributesList['mail'];
+      if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $account = user_load_by_mail($email);
+      }
+      else {
+        $form_state->setErrorByName('name', t('Valid Email Address not received. Please check your email attribute mapping again.'));
+        return;
+      }
+    }
+
+    if ($account == null) {
+      LDAPLOGGERS::addLogger('L6: Account Not Found');
+      Utilities::add_message(t('Error: User Not Found in Drupal.You can only log in the existing Drupal users in this version of the module.
+Please upgrade to the licensed versions of the module in order to create unlimited new users automatically.'), 'form_error', $form_state);
+      return;
+    }
+
+    if($account->isBlocked()){
+      $form_state->setErrorByName('name', t('<strong>BLOCKED USER :</strong> User not allowed to logged in.'));
+      return;
+    }
+
+    $account->save();
+    $edit = array();
+    $edit['redirect'] = $base_url;
+    user_login_finalize($account);
+    LDAPLOGGERS::addLogger('L7: User Logged in Drupal');
+
+    $response = new RedirectResponse($edit['redirect']);
+    $request = \Drupal::request();
+    $request->getSession()->save();
+    $response->prepare($request);
+    \Drupal::service('kernel')->terminate($request, $response);
+    $response->send();
+    exit();
+    return new Response();
+  }
+	else if ($auth_response->statusMessage == "PHP_LDAP_EXTENSION_NOT_ENABLED") {
+		Utilities::add_message(t('PHP LDAP extension is not installed or enabled. Please enable it.'),'form_error',$form_state);
+        return;
+	}
+	else if ($auth_response->statusMessage == "LDAP_NOT_RESPONDING") {
+		Utilities::add_message(t('It looks like your LDAP is not responding. Please contact your administrator or try after some time.'),'form_error',$form_state);
+		return;
+	}
+	else if ($auth_response->statusMessage == "LDAP_ERROR"){
+		Utilities::add_message(t('PHP LDAP extension is not installed or disabled. Please enable it.'),'form_error',$form_state);
+        return;
+	}
+	else if ($auth_response->statusMessage == "CURL_ERROR"){
+		Utilities::add_message(t('PHP cURL extension is not installed or disabled. Please enable it.'),'form_error',$form_state);
+        return;
+	}
+	else if ($auth_response->statusMessage == 'OPENSSL_ERROR') {
+		Utilities::add_message(t('PHP OpenSSL extension is not installed or disabled. Please enable it.'),'form_error',$form_state);
+        return;
+	}
+
+}

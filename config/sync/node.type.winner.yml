@@ -1,0 +1,17 @@
+uuid: e7a5a0d2-b38b-4ca4-aaf9-487ef3261f15
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Winner
+type: winner
+description: 'Prize''s winner'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

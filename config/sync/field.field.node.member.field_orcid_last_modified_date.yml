@@ -1,0 +1,19 @@
+uuid: 250b44d1-8c64-4433-b4cd-55d778523203
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orcid_last_modified_date
+    - node.type.member
+id: node.member.field_orcid_last_modified_date
+field_name: field_orcid_last_modified_date
+entity_type: node
+bundle: member
+label: 'ORCID last modified date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

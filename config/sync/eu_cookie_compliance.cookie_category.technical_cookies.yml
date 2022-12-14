@@ -1,0 +1,9 @@
+uuid: 19de5a12-f8cb-4bd7-9c78-4c0a49ca29c1
+langcode: en
+status: true
+dependencies: {  }
+id: technical_cookies
+label: 'Technical Cookies, essential for the correct functioning of the website'
+description: ''
+checkbox_default_state: required
+weight: -10

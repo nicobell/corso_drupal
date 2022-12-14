@@ -1,0 +1,23 @@
+uuid: fa8c9b4e-bc53-46d6-b97d-755e9888fb03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visa_family_members
+    - node.type.visa_interactive_guide
+id: node.visa_interactive_guide.field_visa_family_members
+field_name: field_visa_family_members
+entity_type: node
+bundle: visa_interactive_guide
+label: 'Do you need information for accompany family members?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

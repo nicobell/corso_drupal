@@ -1,0 +1,6 @@
+ictp_dashboard.home:
+  title: 'Dashboard'
+  description: 'ICTP Dashboard'
+  route_name: ictp_dashboard.home
+  parent: 'system.admin_config_services'
+  weight: -99

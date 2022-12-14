@@ -1,0 +1,27 @@
+uuid: e459ed1a-6d49-4ad5-9948-3ac2b607c416
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_job_opportunity_type
+field_name: field_job_opportunity_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'International Recruitment'
+      label: 'International Recruitment'
+    -
+      value: 'Local Recruitment'
+      label: 'Local Recruitment'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: af7d8045-cb48-46cc-8bca-750223fc53c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_twitter
+    - node.type.member
+  module:
+    - link
+id: node.member.field_twitter
+field_name: field_twitter
+entity_type: node
+bundle: member
+label: Twitter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

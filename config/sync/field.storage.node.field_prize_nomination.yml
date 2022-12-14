@@ -1,0 +1,19 @@
+uuid: aa383240-9861-4d0d-9b26-84c506dce942
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_prize_nomination
+field_name: field_prize_nomination
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

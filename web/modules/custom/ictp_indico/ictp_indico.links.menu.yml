@@ -1,0 +1,6 @@
+ictp_indico.events:
+  title: 'Indico import'
+  description: 'Indico import actions'
+  route_name: ictp_indico.events
+  parent: 'system.admin_config_services'
+  weight: -99

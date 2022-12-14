@@ -1,0 +1,35 @@
+uuid: 294fcb9e-6c93-44e2-a020-48663df11297
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.chart.field_chart_data
+    - field.field.node.chart.field_chart_description
+    - node.type.chart
+  module:
+    - charts
+    - text
+    - user
+id: node.chart.default
+targetEntityType: node
+bundle: chart
+mode: default
+content:
+  field_chart_data:
+    type: chart_config_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_chart_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  links: true
+  search_api_excerpt: true
+  sharing_buttons: true

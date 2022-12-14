@@ -1,0 +1,46 @@
+ictp_dashboard.home:
+  path: '/admin/dashboard/{page}'
+  defaults:
+    _controller: '\Drupal\ictp_dashboard\Controller\IctpDashboardController::home'
+    _title: 'ICTP Dashboard'
+    page: 'home'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _role: 'administrator+content_editor'
+ictp_dashboard.personalprofile:
+  path: '/admin/personal-page/profile'
+  defaults:
+    _controller: '\Drupal\ictp_dashboard\Controller\IctpDashboardController::personalprofile'
+    _title: 'ICTP Personal Profile'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _role: 'member'
+ictp_dashboard.publicprofile:
+  path: '/admin/personal-page/public'
+  defaults:
+    _controller: '\Drupal\ictp_dashboard\Controller\IctpDashboardController::publicprofile'
+    _title: 'ICTP Public Profile'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _role: 'member'
+ictp_dashboard.updatemyorcid:
+  path: '/admin/personal-page/update-orcid'
+  defaults:
+    _controller: '\Drupal\ictp_dashboard\Controller\IctpDashboardController::updatemyorcid'
+    _title: 'ICTP Update my ORCID publications'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _role: 'member'
+ictp_dashboard.updatemyarxiv:
+  path: '/admin/personal-page/update-arxiv'
+  defaults:
+    _controller: '\Drupal\ictp_dashboard\Controller\IctpDashboardController::updatemyarxiv'
+    _title: 'ICTP Update my ARXIV publications'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _role: 'member'

@@ -1,0 +1,27 @@
+uuid: e6b7d9ad-0807-4c8b-afba-3fe08157819b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ictp
+id: specialeventsrelated
+theme: ictp
+region: content_below
+weight: 0
+provider: null
+plugin: 'block_content:30b635de-a97d-4d36-9395-bd116fe4ad7a'
+settings:
+  id: 'block_content:30b635de-a97d-4d36-9395-bd116fe4ad7a'
+  label: 'Special Events Related'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home/ictp-special-events

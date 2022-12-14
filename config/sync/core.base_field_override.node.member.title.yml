@@ -1,0 +1,18 @@
+uuid: aa62de22-bbb0-48f1-87d7-dccc9099b90e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.member
+id: node.member.title
+field_name: title
+entity_type: node
+bundle: member
+label: 'Name Surname'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

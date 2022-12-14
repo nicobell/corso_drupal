@@ -1,0 +1,13 @@
+
+{% for key,answer in answers %}
+
+    {% if answer %}
+        {{ drupal_entity('block', key) }}
+    {% endif %}
+
+{% endfor %}
+
+<div class="button-container">
+    <a class="btn" href="/home/visitors-guide" id="edit-choices">Edit your answers</a>
+    <button id="print">Print</button>
+</div>

@@ -1,0 +1,29 @@
+uuid: e862af12-2f75-4f55-af48-361032b3d391
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_sections
+    - node.type.opportunity
+    - taxonomy.vocabulary.section
+id: node.opportunity.field_ref_sections
+field_name: field_ref_sections
+entity_type: node
+bundle: opportunity
+label: Sections
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      section: section
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

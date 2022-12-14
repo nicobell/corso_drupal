@@ -1,0 +1,72 @@
+uuid: 8c59bc8e-b5ee-4674-a15a-b4cff4382cda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.collaboration.body
+    - field.field.node.collaboration.field_collaboration_logo_code
+    - field.field.node.collaboration.field_ictp_logo_import
+    - field.field.node.collaboration.field_image
+    - field.field.node.collaboration.field_ref_sections
+    - field.field.node.collaboration.field_single_url
+    - image.style.collaboration_250x250
+    - node.type.collaboration
+  module:
+    - link
+    - svg_image
+    - user
+id: node.collaboration.default
+targetEntityType: node
+bundle: collaboration
+mode: default
+content:
+  field_collaboration_logo_code:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ictp_logo_import:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: collaboration_250x250
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_single_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_ref_sections: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  sharing_buttons: true

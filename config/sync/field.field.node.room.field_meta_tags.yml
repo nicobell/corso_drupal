@@ -1,0 +1,21 @@
+uuid: cc8dbfab-9c18-412c-8ca3-0ae17266b294
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.room
+  module:
+    - metatag
+id: node.room.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: room
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

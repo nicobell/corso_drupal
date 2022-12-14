@@ -1,0 +1,45 @@
+# Main theme library.
+global:
+  js:
+    js/corso.js: {}
+
+  css:
+    base:
+      css/base/elements.css: {}
+    component:
+      css/components/block.css: {}
+      css/components/breadcrumb.css: {}
+      css/components/field.css: {}
+      css/components/form.css: {}
+      css/components/header.css: {}
+      css/components/menu.css: {}
+      css/components/messages.css: {}
+      css/components/node.css: {}
+      css/components/sidebar.css: {}
+      css/components/table.css: {}
+      css/components/tabs.css: {}
+      css/components/buttons.css: {}
+      css/components/card-article.css: {}
+    layout:
+      css/layouts/layout.css: {}
+    theme:
+      css/theme/print.css: { media: print }
+
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+
+bootstrap:
+  js:
+    libs/bootstrap/bootstrap.bundle.min.js: {}
+  css:
+    base:
+      libs/bootstrap/bootstrap.min.css: {}
+
+swiper-js:
+  js:
+    libs/swiper-js/swiper-bundle.min.js: {}
+  css:
+    base:
+      libs/swiper-js/swiper-bundle.min.css: {}
+

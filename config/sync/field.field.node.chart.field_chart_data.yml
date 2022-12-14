@@ -1,0 +1,102 @@
+uuid: cc40bd34-2b89-4580-8845-7fbf698aea51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chart_data
+    - node.type.chart
+  module:
+    - charts
+id: node.chart.field_chart_data
+field_name: field_chart_data
+entity_type: node
+bundle: chart
+label: 'Chart data'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    config:
+      library: highcharts
+      type: column
+      series:
+        table_categories_identifier: first_column
+        data_collector_table:
+          -
+            -
+              data: ''
+            -
+              data: ''
+              color: '#9e7d24'
+          -
+            -
+              data: ''
+            -
+              data: ''
+          -
+            -
+              data: ''
+            -
+              data: ''
+          -
+            -
+              data: ''
+            -
+              data: ''
+          -
+            -
+              data: ''
+            -
+              data: ''
+      display:
+        title: ''
+        title_position: out
+        tooltips: '1'
+        legend_position: bottom
+        background: ''
+        dimensions:
+          width: ''
+          width_units: '%'
+          height: ''
+          height_units: ''
+        gauge:
+          max: '100'
+          min: '0'
+          green_from: '85'
+          green_to: '100'
+          yellow_from: '50'
+          yellow_to: '85'
+          red_from: '0'
+          red_to: '50'
+        data_labels: 0
+        data_markers: 0
+        three_dimensional: 0
+        polar: 0
+        stacking: 0
+      xaxis:
+        title: ''
+        labels_rotation: '0'
+      yaxis:
+        title: ''
+        min: ''
+        max: ''
+        prefix: ''
+        suffix: ''
+        decimal_count: ''
+        labels_rotation: '0'
+        secondary:
+          title: ''
+          min: ''
+          max: ''
+          prefix: ''
+          suffix: ''
+          decimal_count: ''
+          labels_rotation: '0'
+        inherit: 0
+      preview: {  }
+    library: highcharts
+    type: column
+default_value_callback: ''
+settings: {  }
+field_type: chart_config

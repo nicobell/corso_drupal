@@ -1,0 +1,27 @@
+uuid: 2cbb4dc5-e867-487d-89a0-a8350dbbae3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachments
+    - node.type.job_opportunity
+  module:
+    - file
+id: node.job_opportunity.field_attachments
+field_name: field_attachments
+entity_type: node
+bundle: job_opportunity
+label: 'Upload additional documentation'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf zip'
+  max_filesize: ''
+  description_field: true
+field_type: file

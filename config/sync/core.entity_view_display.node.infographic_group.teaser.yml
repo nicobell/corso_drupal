@@ -1,0 +1,45 @@
+uuid: ecdb269c-359a-4f8d-bc65-dc1f2a043cba
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.infographic_group.body
+    - field.field.node.infographic_group.field_info_group_layout
+    - field.field.node.infographic_group.field_ref_infographic
+    - field.field.node.infographic_group.field_ref_sections
+    - field.field.node.infographic_group.field_weight
+    - node.type.infographic_group
+  module:
+    - text
+    - user
+id: node.infographic_group.teaser
+targetEntityType: node
+bundle: infographic_group
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_info_group_layout: true
+  field_ref_infographic: true
+  field_ref_sections: true
+  field_weight: true
+  langcode: true
+  search_api_excerpt: true

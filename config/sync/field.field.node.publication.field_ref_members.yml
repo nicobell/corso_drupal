@@ -1,0 +1,29 @@
+uuid: 77ed3c2d-8324-4ef3-885e-14125c3d6452
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_members
+    - node.type.member
+    - node.type.publication
+id: node.publication.field_ref_members
+field_name: field_ref_members
+entity_type: node
+bundle: publication
+label: Members
+description: 'Campo tecnico per l''editing'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      member: member
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

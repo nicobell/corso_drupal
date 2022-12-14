@@ -1,0 +1,20 @@
+uuid: d7091c35-dd77-4e93-8912-ea10676c1b7c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mediteran
+_core:
+  default_config_hash: eHMuP9ha-vjv0ljaqdpyIMqWt4P-WPXDLMn40ZYV_rg
+id: mediteran_local_actions
+theme: mediteran
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

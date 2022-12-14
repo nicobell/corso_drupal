@@ -1,0 +1,28 @@
+uuid: 3360dbb5-b039-4ba0-aea8-9c98158746df
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - system
+    - views
+  theme:
+    - ictp
+id: scientific_calendar_filter
+theme: ictp
+region: content
+weight: -60
+provider: null
+plugin: 'views_exposed_filter_block:events-block_1'
+settings:
+  id: 'views_exposed_filter_block:events-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: Filter
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '*/scientific-calendar'

@@ -1,0 +1,21 @@
+uuid: a6202100-1558-4afd-962a-10c50a68b9d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_deadline
+    - node.type.event
+  module:
+    - datetime
+id: node.event.field_event_deadline
+field_name: field_event_deadline
+entity_type: node
+bundle: event
+label: Deadline
+description: 'imported from manual input <strong>**DEADLINE:</strong> indico'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

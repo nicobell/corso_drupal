@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @author Alessandro Fontana
+ * 
+ * Da parametro passato in url, prende i blocchi vista dal back
+ * inietta custom css del modulo e cambia titolo vista
+ */
+
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+const PAGES = array(
+  'home' => ['title' => 'ICTP Dashboard'],
+  'news' => ['title' => 'ICTP News', 'blocks' => array('news_block')],
+  'pages' => ['title' => 'ICTP Pages', 'blocks' => array('pages_block')],
+  'carousel' => ['title' => 'ICTP Carousel images', 'blocks' => array('carousel_block')],
+  'collaborations' => ['title' => 'ICTP Collaborations', 'blocks' => array('collaborations_only_block')],
+  'collaboration-groups' => ['title' => 'ICTP Collaboration groups', 'blocks' => array('collaborations_block')],
+  'groups' => ['title' => 'ICTP Groups of people', 'blocks' => array('groups_of_people_block')],
+  'prizes' => ['title' => 'ICTP Prizes', 'blocks' => array('prizes_block')],
+  'winners' => ['title' => 'ICTP Winners', 'blocks' => array('winners_block')],
+  'topics' => ['title' => 'ICTP Topics', 'blocks' => array('topics_block')],
+  'projects' => ['title' => 'ICTP Topics and projects', 'blocks' => array('projects_block')],
+  'opportunities' => ['title' => 'ICTP Opportunities', 'blocks' => array('opportunities_block')],
+  'rooms' => ['title' => 'ICTP Buildings and rooms', 'blocks' => array('rooms_block')],
+  'events' => ['title' => 'ICTP Events', 'blocks' => array('events_block')],
+  'publications' => ['title' => 'ICTP Publications', 'blocks' => array('publications_block')],
+  'infographics' => ['title' => 'ICTP Infographics', 'blocks' => array('infographics_block')],
+  'openbids' => ['title' => 'ICTP Open bids', 'blocks' => array('openbids_block')],
+  'jobopportunities' => ['title' => 'ICTP Job opportunities', 'blocks' => array('jobopportunities_block')],
+);
+
+
+ /**
+ * Implements hook_help().
+ */
+function ictp_dashboard_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ictp_indico module.
+    case 'help.page.ictp_dashboard':
+      $output = '';
+      $output .= '<h3>' . t('Dashboard') . '</h3>';
+      $output .= '<p>' . t('This module add custom Dasboard for editor.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+

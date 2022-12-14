@@ -1,0 +1,35 @@
+ldap_auth.customer_setup:
+  route_name: ldap_auth.customer_setup
+  title: 'Register/Login'
+  weight: 80
+  base_route: ldap_auth.ldap_config
+
+ldap_auth.ldap_config:
+  route_name: ldap_auth.ldap_config
+  title: 'LDAP Configuration'
+  weight: 20
+  base_route: ldap_auth.ldap_config
+
+ldap_auth.signin_settings:
+  route_name: ldap_auth.signin_settings
+  title: 'Signin Settings'
+  weight: 30
+  base_route: ldap_auth.ldap_config
+
+ldap_auth.attribute_mapping:
+  route_name: ldap_auth.attribute_mapping
+  title: 'Attribute & Role Mapping'
+  weight: 40
+  base_route: ldap_auth.ldap_config
+
+ldap_auth.user_sync:
+   route_name: ldap_auth.user_sync
+   title: 'LDAP Provisioning'
+   weight: 50
+   base_route: ldap_auth.ldap_config
+
+ldap_auth.troubleshoot:
+  route_name: ldap_auth.troubleshoot
+  title: 'Support & Troubleshoot'
+  weight: 60
+  base_route: ldap_auth.ldap_config

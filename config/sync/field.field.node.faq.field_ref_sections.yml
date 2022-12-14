@@ -1,0 +1,29 @@
+uuid: 7d47e4e2-73ab-4429-8432-ac762535d653
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ref_sections
+    - node.type.faq
+    - taxonomy.vocabulary.section
+id: node.faq.field_ref_sections
+field_name: field_ref_sections
+entity_type: node
+bundle: faq
+label: Sections
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      section: section
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: e22b094b-a79c-4859-9e2c-81e1522b6f7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.building
+  module:
+    - views
+  theme:
+    - ictp
+id: exposedformbuildingcampus_search
+theme: ictp
+region: hidden_region
+weight: -64
+provider: null
+plugin: 'views_exposed_filter_block:building-campus_search'
+settings:
+  id: 'views_exposed_filter_block:building-campus_search'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility: {  }

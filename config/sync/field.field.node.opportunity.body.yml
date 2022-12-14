@@ -1,0 +1,23 @@
+uuid: 71b6242a-8718-413c-8632-4a408b9e9f44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.opportunity
+  module:
+    - text
+id: node.opportunity.body
+field_name: body
+entity_type: node
+bundle: opportunity
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

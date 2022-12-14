@@ -1,0 +1,31 @@
+uuid: 19e4ca99-a6b0-49b5-9428-4dde0db05a16
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - ictp
+id: ictp_mainnavigation_visitor_guide
+theme: ictp
+region: footer_4
+weight: -41
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Visitor''s guide'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: active
+  label_link: false
+  label_type: fixed
+  level: 1
+  depth: 1
+  expand_all_items: true
+  parent: 'main:menu_link_content:f25e778d-2c88-43ea-af65-8f8bc5b7f514'
+  suggestion: main
+visibility: {  }

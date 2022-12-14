@@ -1,0 +1,22 @@
+uuid: c3e439fc-a1f4-4464-a6e5-2fa15cb3c1da
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - ictp
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: ictp_messages
+theme: ictp
+region: content
+weight: -64
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

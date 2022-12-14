@@ -1,0 +1,21 @@
+uuid: d9b42bd1-9ef3-48ca-a72f-741b04ac7a7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_call_open_date
+    - node.type.opportunity
+  module:
+    - datetime
+id: node.opportunity.field_call_open_date
+field_name: field_call_open_date
+entity_type: node
+bundle: opportunity
+label: 'Call open date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

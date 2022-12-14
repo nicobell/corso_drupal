@@ -1,0 +1,33 @@
+uuid: 3f8fa2c2-e74f-425d-b6f0-a34cc0a5290d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.timeline.field_ending_year
+    - field.field.node.timeline.field_experience_description
+    - field.field.node.timeline.field_starting_year
+    - node.type.timeline
+  module:
+    - user
+id: node.timeline.teaser
+targetEntityType: node
+bundle: timeline
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharing_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_ending_year: true
+  field_experience_description: true
+  field_starting_year: true
+  langcode: true
+  search_api_excerpt: true

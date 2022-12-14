@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "3f5d1b52-b605-4d8f-a9dc-4f6d9b483c52",
+		"name": "ORCID",
+		"description": "https://pub.orcid.org/v3.0/#!/Development_Public_API_v3.0/viewRecordv3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "1 Request token",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "APP-0DY00403Y4KZ0PS1",
+									"type": "default"
+								},
+								{
+									"key": "client_secret",
+									"value": "3fe88a6a-4270-4b3a-a8c5-db5b760a4938",
+									"type": "default"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "default"
+								},
+								{
+									"key": "scope",
+									"value": "/read-public",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sandbox.orcid.org/oauth/token",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"orcid",
+								"org"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 Display record Pub API",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-type",
+								"value": "application/vnd.orcid+xml"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer a6e635c2-a204-4027-8858-1fedd7561cdb"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://pub.sandbox.orcid.org/v3.0/0000-0002-2151-310X",
+							"protocol": "https",
+							"host": [
+								"pub",
+								"sandbox",
+								"orcid",
+								"org"
+							],
+							"path": [
+								"v3.0",
+								"0000-0002-2151-310X"
+							]
+						},
+						"description": "**5. Use the access token and ORCID iD to read or update the record.**\r\n\r\nSee the current [XSD documentation](https://github.com/ORCID/orcid-model/blob/master/src/main/resources/record_2.1/README.md#calls) for possible calls.\r\n\r\n| Item          |Parameter            |\r\n|---------------|---------------------|\r\n| orcid \t\t| *The ORCID ID*      |\r\n| token\t\t\t|*The generated token*|"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Works summary V3",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://pub.orcid.org/v3.0/0000-0002-0578-0830/works",
+					"protocol": "https",
+					"host": [
+						"pub",
+						"orcid",
+						"org"
+					],
+					"path": [
+						"v3.0",
+						"0000-0002-0578-0830",
+						"works"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Work Full V3",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://pub.orcid.org/v3.0/0000-0002-0578-0830/work/99013307",
+					"protocol": "https",
+					"host": [
+						"pub",
+						"orcid",
+						"org"
+					],
+					"path": [
+						"v3.0",
+						"0000-0002-0578-0830",
+						"work",
+						"99013307"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "clientSecret",
+				"value": "{{client_secret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{client_id}}",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://sandbox.orcid.org/oauth/authorize",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "/read-public",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://sandbox.orcid.org/oauth/token",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "Read public",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "client_id",
+			"value": "client_id",
+			"type": "string"
+		},
+		{
+			"key": "client_secret",
+			"value": "client_secret",
+			"type": "string"
+		}
+	]
+}

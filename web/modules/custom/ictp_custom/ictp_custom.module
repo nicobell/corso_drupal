@@ -1,0 +1,72 @@
+<?php
+/**
+ * @author Nicola Dimatteo <hello@nicoladimatteo.it>
+ * @link https://github.com/webnicola
+ */
+
+use Drupal\redirect\Entity\Redirect;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function ictp_custom_preprocess_status_messages(&$variables) {
+  $route = \Drupal::routeMatch()->getRouteName();
+  if ($route === 'user.login' && isset($variables['message_list']['error'])) {
+    $status_messages = $variables['message_list']['error'];
+    foreach ($status_messages as $delta => $message) {
+      if(strpos($message, 'Unrecognized username or password. ') !== false){
+        $variables['message_list']['error'][$delta] = t('Unrecognized username or password. Please try again or contact the <a href="#">IT Helpdesk</a>');
+      }
+    }
+  }
+}
+
+function ictp_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Custom library 
+  if ($form_id == 'node_page_form' || 'node_page_edit_form') {
+    $form['#attached']['library'][] = 'ictp/custom_backend';
+  }
+
+  // As requested: save member profile -> redirect same page edit
+  if ($form_id == 'node_member_edit_form' ) {
+    //$current_path = \Drupal::service('path.current')->getPath();
+    $form['actions']['submit']['#submit'][]= 'member_save_redirect';
+  }
+  
+}
+
+// Redirect to edit form on member save
+function member_save_redirect (&$form, \Drupal\Core\Form\FormStateInterface  $form_state){
+    $entity = $form_state->getFormObject()->getEntity();
+    $toUrl = $entity->toUrl('edit-form');
+    $form_state->setRedirectUrl($toUrl);
+}
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function ictp_custom_toolbar_alter(&$items) {
+  $account = Drupal::currentUser();
+  if ( !in_array('administrator', $account->getRoles()) ) {
+    unset($items['administration']);
+    unset($items['shortcuts']);
+  }
+}
+
+function ictp_custom_node_presave(\Drupal\Core\Entity\EntityInterface $node) {
+  if ($node->getType() === 'article') {
+    $ex_news_url = str_replace('https://www.ictp.it/', '', $node->get('field_url_news_umbraco')->getValue()[0]['value']);
+    $redirects = \Drupal::service('redirect.repository')->findBySourcePath($ex_news_url);
+    // creo la regola del redirect una sola volta
+    if(!count($redirects)){
+      Redirect::create([
+        'redirect_source' => $ex_news_url,
+        'redirect_redirect' => 'internal:/node/' . $node->id(),
+        'language' => 'en',
+        'status_code' => '301',
+      ])->save();
+    }
+  }
+}

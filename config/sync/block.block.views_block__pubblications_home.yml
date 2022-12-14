@@ -1,0 +1,29 @@
+uuid: 9c1f46cd-78e4-408a-81a6-74ede955509f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.pubblications
+  module:
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__pubblications_home
+theme: ictp
+region: content
+weight: -37
+provider: null
+plugin: 'views_block:pubblications-home'
+settings:
+  id: 'views_block:pubblications-home'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home/publications

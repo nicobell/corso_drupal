@@ -1,0 +1,8 @@
+uuid: ca94e23b-9115-432e-8ca6-dc7efcc1e71c
+langcode: en
+status: true
+dependencies: {  }
+id: node__prize
+label: 'Content: Prize'
+tags:
+  image_src: '[node:field_prize_in_honor_image]'

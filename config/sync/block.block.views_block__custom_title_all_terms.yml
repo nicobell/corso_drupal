@@ -1,0 +1,33 @@
+uuid: 2eefa1aa-6786-4152-a42d-7a005f1ce747
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.custom_title_term
+  module:
+    - taxonomy
+    - views
+  theme:
+    - ictp
+id: views_block__custom_title_all_terms
+theme: ictp
+region: page_title
+weight: -44
+provider: null
+plugin: 'views_block:custom_title_term-block_2'
+settings:
+  id: 'views_block:custom_title_term-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: true
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      section: section

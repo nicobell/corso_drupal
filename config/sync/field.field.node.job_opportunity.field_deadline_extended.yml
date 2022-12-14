@@ -1,0 +1,23 @@
+uuid: 055b04a3-91dd-4560-9273-c9a168f589bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deadline_extended
+    - node.type.job_opportunity
+id: node.job_opportunity.field_deadline_extended
+field_name: field_deadline_extended
+entity_type: node
+bundle: job_opportunity
+label: 'Deadline extended'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Deadline Extended'
+  off_label: 'Regular Deadline'
+field_type: boolean

@@ -1,0 +1,45 @@
+ictp_indico.events:
+  path: '/admin/ictp_indico'
+  defaults:
+    _controller: '\Drupal\ictp_indico\Controller\IctpIndicoController::home'
+    _title: 'ICTP Indico import'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'administer content'
+ictp_indico.events.add:
+  path: '/admin/ictp_indico/add'
+  defaults:
+    _controller: '\Drupal\ictp_indico\Controller\IctpIndicoController::add'
+    _title: 'Add events'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'
+ictp_indico.events.add.archive:
+  path: '/admin/ictp_indico/add/archive'
+  defaults:
+    _form: '\Drupal\ictp_indico\Form\IctpIndicoFormAdd'
+    _title: 'Add events filter'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'
+ictp_indico.events.delete:
+  path: '/admin/ictp_indico/delete'
+  defaults:
+    _controller: '\Drupal\ictp_indico\Controller\IctpIndicoController::delete'
+    _title: 'Delete events'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'
+ictp_indico.collaborationlogos:
+  path: '/admin/ictp_indico/collaborationlogos'
+  defaults:
+    _controller: '\Drupal\ictp_indico\Controller\IctpIndicoController::collaborationlogos'
+    _title: 'INDICO Collaboration logos'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'

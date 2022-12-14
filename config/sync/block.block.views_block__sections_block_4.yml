@@ -1,0 +1,29 @@
+uuid: d0beb703-e54e-4e90-a9a0-537cf0321827
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sections
+  module:
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__sections_block_4
+theme: ictp
+region: content
+weight: -16
+provider: null
+plugin: 'views_block:sections-block_4'
+settings:
+  id: 'views_block:sections-block_4'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home/research-fields

@@ -1,0 +1,24 @@
+uuid: 70b1865e-579d-46ca-b965-9b1692868c6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ictp
+id: pagetitle
+theme: ictp
+region: page_title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/search*'

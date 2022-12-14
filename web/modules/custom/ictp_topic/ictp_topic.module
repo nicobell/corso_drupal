@@ -1,0 +1,59 @@
+<?php
+/**
+ * @author Nicola Dimatteo <hello@nicoladimatteo.it>
+ * @link https://github.com/webnicola
+ */
+
+ use \Drupal\Core\Form\FormStateInterface;
+ use \Drupal\node\Entity\Node;
+ use \Drupal\taxonomy\Entity\Term;
+
+function ictp_topic_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $node = $form_state->getFormObject()->getEntity();
+  if ($node->getType() != 'project') {
+    return;
+  }
+
+  $form['field_ref_topic']['widget']['#ajax'] = [
+    'event' => 'change',
+    'callback' => '_ictp_topic_get_category',
+    'wrapper' => 'theme_topic-ajax',
+  ];
+
+  $form['field_ref_theme_topic']['#prefix'] = '<div id="theme_topic-ajax">';
+  $form['field_ref_theme_topic']['#suffix'] = '</div>';
+  $form['field_ref_theme_topic']['#states'] = ['visible' => ['select[name="field_ref_topic"]' => ['!value' => '_none']]];
+  $topic = $form['field_ref_topic']['widget']['#default_value'];
+  $selected_topic = count($topic) ? $form['field_ref_topic']['widget']['#default_value'][0] : '';
+  $form['field_ref_theme_topic']['widget']['#options'] = _get_category_dropdown_options($selected_topic);
+}
+
+function _ictp_topic_get_category(array &$form, FormStateInterface $form_state) {
+  $topic = $form_state->getValue('field_ref_topic');
+  $selected_topic = $form_state->getValue('field_ref_topic')[0]['target_id'];
+  $form['field_ref_theme_topic']['widget']['#options'] = _get_category_dropdown_options($selected_topic);
+  if($form['field_ref_theme_topic']['widget']['#options']['_none'] == '- None -') {
+    $form['field_ref_theme_topic']['#prefix'] = '<div id="theme_topic-ajax" class="hidden">';
+  }
+  return $form['field_ref_theme_topic'];
+}
+
+function _get_category_dropdown_options($nid = '') {
+  $options = [];
+  if(is_numeric($nid)) {
+    $node = Node::load($nid);
+    $category = $node->get('field_ref_theme_topics')->getValue();
+    if(count($category)) {
+      $categories_types = $node->get('field_ref_theme_topics')->referencedEntities();
+      $options['_none'] = 'Choose category';
+      foreach ($categories_types as $category_types) {
+        $options[$category_types->id()] = $category_types->label();
+      }
+    } else {
+      $options['_none'] = '- None -';
+    }
+  } else {
+    $options['_none'] = '- None -';
+  }
+  return $options;
+}

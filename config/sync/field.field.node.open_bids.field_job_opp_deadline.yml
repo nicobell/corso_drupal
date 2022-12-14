@@ -1,0 +1,21 @@
+uuid: 34a929b5-4a98-4721-a669-dcfbdb2eec2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_opp_deadline
+    - node.type.open_bids
+  module:
+    - datetime
+id: node.open_bids.field_job_opp_deadline
+field_name: field_job_opp_deadline
+entity_type: node
+bundle: open_bids
+label: Deadline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,26 @@
+uuid: 04cb6aa7-74fe-4571-8623-9ec03ba8e4b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.page_banner
+  module:
+    - crop
+name: page_banner
+label: 'Page banner'
+effects:
+  c79f744d-8720-41be-84a7-095bc08379de:
+    uuid: c79f744d-8720-41be-84a7-095bc08379de
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: page_banner
+      automatic_crop_provider: null
+  80763281-d8b6-4a2c-a3ba-2faf216836fa:
+    uuid: 80763281-d8b6-4a2c-a3ba-2faf216836fa
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1664
+      height: 520
+      anchor: center-center

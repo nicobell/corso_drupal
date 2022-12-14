@@ -1,0 +1,23 @@
+uuid: c990993b-25bf-4bbb-93b8-0186aa114002
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_section_show_carousel
+    - taxonomy.vocabulary.section
+id: taxonomy_term.section.field_section_show_carousel
+field_name: field_section_show_carousel
+entity_type: taxonomy_term
+bundle: section
+label: 'Show carousel'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

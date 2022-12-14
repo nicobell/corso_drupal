@@ -1,0 +1,29 @@
+uuid: b41bb295-29fc-4ea8-961a-528ac8cefdca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_speakers
+    - node.type.event
+    - node.type.speaker
+id: node.event.field_speakers
+field_name: field_speakers
+entity_type: node
+bundle: event
+label: Speakers
+description: 'Please add the speakers'' information <b>ONLY</b> for <i>Colloquia</i> and <i>Salam Distinguished Lectures</i>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      speaker: speaker
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

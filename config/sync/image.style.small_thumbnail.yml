@@ -1,0 +1,26 @@
+uuid: 6439f5e4-b163-4d9b-a097-fa65adff55c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.small_thumbnail
+  module:
+    - crop
+name: small_thumbnail
+label: 'Small Thumbnail'
+effects:
+  9ec90e8c-ec2a-44f9-a0a6-e58c1324ee2a:
+    uuid: 9ec90e8c-ec2a-44f9-a0a6-e58c1324ee2a
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: small_thumbnail
+      automatic_crop_provider: null
+  b72e967b-5d63-47cc-8670-95e8f47630fc:
+    uuid: b72e967b-5d63-47cc-8670-95e8f47630fc
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 250
+      height: 250
+      anchor: center-center

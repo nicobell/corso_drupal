@@ -1,0 +1,19 @@
+uuid: 88111f0c-5759-4b3e-88b4-da25fdb7ee8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_building_address
+    - node.type.building
+id: node.building.field_building_address
+field_name: field_building_address
+entity_type: node
+bundle: building
+label: Address
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,17 @@
+uuid: 18065e02-64f1-4204-aef0-2f4c86681ac7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Notice
+type: notice
+description: 'Notice CT for tile in Infoscreens (temporal news, advices or warnings)'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

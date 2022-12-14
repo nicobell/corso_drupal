@@ -1,0 +1,41 @@
+ldap_auth.ldap_config:
+  route_name: ldap_auth.ldap_config
+  title: 'Active Directory Integration / LDAP Integration - NTLM & Kerberos Login Configuration'
+  description: 'Configure Active Directory/LDAP Login on your Drupal site'
+  parent: user.admin_index
+
+ldap_auth.customer_setup:
+  route_name: ldap_auth.customer_setup
+  title: 'Register/Login'
+  description: 'Active Directory Integration / LDAP Integration - NTLM & Kerberos Login Configuration'
+  parent: ldap_auth.ldap_config
+
+ldap_auth.signin_settings:
+  route_name: ldap_auth.signin_settings
+  title: 'Sign In Settings'
+  description: 'Active Directory Integration / LDAP Integration - NTLM & Kerberos Login Configuration'
+  parent: ldap_auth.ldap_config
+
+ldap_auth.attribute_mapping:
+  route_name: ldap_auth.attribute_mapping
+  title: 'Attribute & Role Mapping'
+  description: 'Active Directory Integration / LDAP Integration - NTLM & Kerberos Login Configuration'
+  parent: ldap_auth.ldap_config
+
+ldap_auth.user_sync:
+   route_name: ldap_auth.user_sync
+   title: 'Directory Sync'
+   description: 'Active Directory Integration / LDAP Integration - NTLM & Kerberos Login Configuration'
+   parent: ldap_auth.ldap_config
+
+ldap_auth.troubleshoot:
+  route_name: ldap_auth.troubleshoot
+  title: 'Support & Troubleshoot'
+  description: 'Logging and Troubleshooting'
+  parent: ldap_auth.ldap_config
+
+ldap_auth.licensing:
+  route_name: ldap_auth.licensing
+  title: 'Upgrade Plans'
+  description: 'Active Directory Integration / LDAP Integration - NTLM & Kerberos Login Configuration'
+  parent: ldap_auth.ldap_config

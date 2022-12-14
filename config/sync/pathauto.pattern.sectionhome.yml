@@ -1,0 +1,22 @@
+uuid: b2073585-49db-47b4-9f5f-4fd06c322b40
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: sectionhome
+label: 'Section home'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:field_section_acronym:value]'
+selection_criteria:
+  b54c7c04-d4cc-45ca-8a1f-0a87e22d8a8b:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: b54c7c04-d4cc-45ca-8a1f-0a87e22d8a8b
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      section: section
+selection_logic: and
+weight: -3
+relationships: {  }

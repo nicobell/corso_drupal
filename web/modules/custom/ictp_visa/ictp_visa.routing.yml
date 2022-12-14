@@ -1,0 +1,9 @@
+ictp_visa.guide:
+  path: '/home/visa/guide'
+  defaults:
+    _controller: '\Drupal\ictp_visa\Controller\IctpVisaoController::guide'
+    _title: 'ICTP Visa guide'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'

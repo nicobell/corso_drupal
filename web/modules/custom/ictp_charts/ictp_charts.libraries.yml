@@ -1,0 +1,6 @@
+charts:
+  version: VERSION
+  js:
+    js/charts.js: { weight: -6 }
+  dependencies:
+    - charts/global

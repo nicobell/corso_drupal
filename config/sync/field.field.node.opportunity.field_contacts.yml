@@ -1,0 +1,21 @@
+uuid: 0a36570e-0161-4e9e-af26-4ab56a9612c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contacts
+    - node.type.opportunity
+  module:
+    - text
+id: node.opportunity.field_contacts
+field_name: field_contacts
+entity_type: node
+bundle: opportunity
+label: Contacts
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,25 @@
+uuid: f6f347a6-9771-4456-9c5f-ad595edff419
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:visa_guide:bc910186-f534-4561-8650-05289eb87a96'
+  module:
+    - block_content
+  theme:
+    - ictp
+id: v8
+theme: ictp
+region: hidden_region
+weight: -54
+provider: null
+plugin: 'block_content:bc910186-f534-4561-8650-05289eb87a96'
+settings:
+  id: 'block_content:bc910186-f534-4561-8650-05289eb87a96'
+  label: V8
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

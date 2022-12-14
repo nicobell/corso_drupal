@@ -1,0 +1,36 @@
+ictp_members.home:
+  path: '/admin/ictp_members'
+  defaults:
+    _controller: '\Drupal\ictp_members\Controller\IctpMembersController::home'
+    _title: 'ICTP Memebrs import'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'administer content'
+ictp_members.add:
+  path: '/admin/ictp_members/add'
+  defaults:
+    _controller: '\Drupal\ictp_members\Controller\IctpMembersController::add'
+    _title: 'Import members'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'
+ictp_members.delete:
+  path: '/admin/ictp_members/delete'
+  defaults:
+    _controller: '\Drupal\ictp_members\Controller\IctpMembersController::delete'
+    _title: 'Delete members'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'
+ictp_members.debugdata:
+  path: '/admin/ictp_members/debugdata'
+  defaults:
+    _controller: '\Drupal\ictp_members\Controller\IctpMembersController::debugdata'
+    _title: 'Debug'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'

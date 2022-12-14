@@ -1,0 +1,30 @@
+uuid: 4d498683-38ae-4a03-8f4d-cb40fe1a4b93
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.charts
+  module:
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__charts_block_1_3
+theme: ictp
+region: content
+weight: -40
+provider: null
+plugin: 'views_block:charts-block_1'
+settings:
+  id: 'views_block:charts-block_1'
+  label: 'Chart Publication'
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: 'Chart Publication'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home/publications

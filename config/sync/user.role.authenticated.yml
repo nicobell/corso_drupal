@@ -1,0 +1,24 @@
+uuid: f1235779-7cd7-4a29-9fd2-7606d8a205af
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - contact
+    - eu_cookie_compliance
+    - filter
+    - shortcut
+    - system
+_core:
+  default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'display eu cookie compliance popup'
+  - 'use text format basic_html'

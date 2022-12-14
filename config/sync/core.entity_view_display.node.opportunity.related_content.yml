@@ -1,0 +1,142 @@
+uuid: 78f9de17-3b68-497b-8bf8-ce7296851f2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.related_content
+    - field.field.node.opportunity.body
+    - field.field.node.opportunity.field_call_open_date
+    - field.field.node.opportunity.field_contacts
+    - field.field.node.opportunity.field_duration
+    - field.field.node.opportunity.field_entitlements
+    - field.field.node.opportunity.field_event_deadline
+    - field.field.node.opportunity.field_for_developing_countries
+    - field.field.node.opportunity.field_how_to_apply
+    - field.field.node.opportunity.field_location
+    - field.field.node.opportunity.field_meta_tags
+    - field.field.node.opportunity.field_opportunity_category
+    - field.field.node.opportunity.field_ref_collaborations
+    - field.field.node.opportunity.field_ref_field_of_research
+    - field.field.node.opportunity.field_ref_sections
+    - field.field.node.opportunity.field_related_programmes
+    - field.field.node.opportunity.field_selection_process
+    - field.field.node.opportunity.field_short_title
+    - field.field.node.opportunity.field_single_url
+    - field.field.node.opportunity.field_target
+    - field.field.node.opportunity.field_target_description
+    - field.field.node.opportunity.field_website
+    - field.field.node.opportunity.field_who_can_apply
+    - node.type.opportunity
+  module:
+    - datetime
+    - user
+id: node.opportunity.related_content
+targetEntityType: node
+bundle: opportunity
+mode: related_content
+content:
+  field_duration:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_event_deadline:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_for_developing_countries:
+    type: boolean
+    label: hidden
+    settings:
+      format: custom
+      format_custom_false: ''
+      format_custom_true: 'For developing Countries'
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_location:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_opportunity_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ref_collaborations:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_ref_field_of_research:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ref_sections:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_short_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_target:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  body: true
+  field_call_open_date: true
+  field_contacts: true
+  field_entitlements: true
+  field_how_to_apply: true
+  field_meta_tags: true
+  field_related_programmes: true
+  field_selection_process: true
+  field_single_url: true
+  field_target_description: true
+  field_website: true
+  field_who_can_apply: true
+  search_api_excerpt: true
+  sharing_buttons: true

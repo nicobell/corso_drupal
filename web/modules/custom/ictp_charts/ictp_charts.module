@@ -1,0 +1,7 @@
+<?php
+/**
+ * Implements hook_chart_alter().
+ */
+function ictp_charts_chart_alter(array &$element, $chart_id) {
+  $element['#attached']['library'][] = 'ictp_charts/charts';
+}

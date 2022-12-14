@@ -1,0 +1,26 @@
+uuid: b4d442ec-6a5f-416e-a4b4-727d51a44766
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.prize
+  module:
+    - crop
+name: prize
+label: Prize
+effects:
+  59a717c8-6a87-4b31-8db8-85d770640870:
+    uuid: 59a717c8-6a87-4b31-8db8-85d770640870
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: prize
+      automatic_crop_provider: null
+  35d0bdb8-e22b-4f99-80e6-8d1ae703e467:
+    uuid: 35d0bdb8-e22b-4f99-80e6-8d1ae703e467
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 600
+      height: 338
+      anchor: center-center

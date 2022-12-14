@@ -1,0 +1,22 @@
+uuid: aa541392-95c6-47c8-9d1d-b14e29158efb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: building
+label: Building
+type: 'canonical_entities:node'
+pattern: 'building/[node:title]'
+selection_criteria:
+  7fa6f9b0-3487-4ee8-8218-cd37ca3b5987:
+    id: node_type
+    negate: false
+    uuid: 7fa6f9b0-3487-4ee8-8218-cd37ca3b5987
+    context_mapping:
+      node: node
+    bundles:
+      building: building
+selection_logic: and
+weight: -9
+relationships: {  }

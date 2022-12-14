@@ -1,0 +1,55 @@
+uuid: 385340ce-df87-485f-ad92-2cf8bd554d0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.winner.field_ref_prize
+    - field.field.node.winner.field_single_url
+    - field.field.node.winner.field_year
+    - node.type.winner
+  module:
+    - link
+    - user
+id: node.winner.default
+targetEntityType: node
+bundle: winner
+mode: default
+content:
+  field_ref_prize:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_single_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_year:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
+  sharing_buttons: true

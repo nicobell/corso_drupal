@@ -1,0 +1,8 @@
+uuid: 1de3d8f8-3dff-4b30-a014-d94f1abb3860
+langcode: en
+status: true
+dependencies: {  }
+id: news_format
+label: 'News format'
+locked: false
+pattern: 'd M Y'

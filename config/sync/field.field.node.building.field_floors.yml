@@ -1,0 +1,19 @@
+uuid: 732d1952-407e-4306-a7bc-157d653c0d5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_floors
+    - node.type.building
+id: node.building.field_floors
+field_name: field_floors
+entity_type: node
+bundle: building
+label: Floors
+description: 'Text with total building''s floors, ex.: 4 floors'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 5270c10b-fcee-484e-8eb3-e872e065aecb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highlight_first_related
+    - node.type.page
+id: node.page.field_highlight_first_related
+field_name: field_highlight_first_related
+entity_type: node
+bundle: page
+label: 'highlight first related topic'
+description: 'By checking this field, the first related topic listed here below is highlighted, and it will appear bigger than the others in the related topics section.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

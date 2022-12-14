@@ -1,0 +1,26 @@
+uuid: 31438300-f75b-439e-884a-1530d5ebe958
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.news
+  module:
+    - crop
+name: news
+label: News
+effects:
+  53ad55ea-f134-4717-b7b9-49cf733f3867:
+    uuid: 53ad55ea-f134-4717-b7b9-49cf733f3867
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: news
+      automatic_crop_provider: null
+  74b1b2b3-1751-4806-971b-7056f36d8174:
+    uuid: 74b1b2b3-1751-4806-971b-7056f36d8174
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1280
+      height: 720
+      anchor: left-top

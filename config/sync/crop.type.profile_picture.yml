@@ -1,0 +1,12 @@
+uuid: 4170dd45-d700-496b-b24d-97658d972e83
+langcode: en
+status: true
+dependencies: {  }
+label: 'Profile Picture'
+id: profile_picture
+description: ''
+aspect_ratio: '1:1'
+soft_limit_width: 350
+soft_limit_height: 345
+hard_limit_width: null
+hard_limit_height: null

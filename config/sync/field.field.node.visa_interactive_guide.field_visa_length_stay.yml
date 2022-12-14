@@ -1,0 +1,21 @@
+uuid: 90cc22a3-6507-4a88-8296-f865f6ad3e72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visa_length_stay
+    - node.type.visa_interactive_guide
+  module:
+    - options
+id: node.visa_interactive_guide.field_visa_length_stay
+field_name: field_visa_length_stay
+entity_type: node
+bundle: visa_interactive_guide
+label: 'Length of your stay'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

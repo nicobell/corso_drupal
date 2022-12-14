@@ -1,0 +1,24 @@
+uuid: 4ad2fa53-b470-4e15-8d6a-77f0313508e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.teaching_material
+  module:
+    - datetime
+id: node.teaching_material.field_date
+field_name: field_date
+entity_type: node
+bundle: teaching_material
+label: Date
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

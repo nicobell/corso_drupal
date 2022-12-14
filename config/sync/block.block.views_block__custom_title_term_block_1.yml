@@ -1,0 +1,30 @@
+uuid: 2b3975aa-9528-4d21-a08d-fac7b6ebcf50
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.custom_title_term
+  module:
+    - system
+    - views
+  theme:
+    - ictp
+id: views_block__custom_title_term_block_1
+theme: ictp
+region: hero
+weight: -61
+provider: null
+plugin: 'views_block:custom_title_term-block_1'
+settings:
+  id: 'views_block:custom_title_term-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/home\r\n/hecap\r\n/math\r\n/esp\r\n/sti\r\n/qls\r\n/cmsp"

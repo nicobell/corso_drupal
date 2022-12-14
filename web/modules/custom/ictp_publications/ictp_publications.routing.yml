@@ -1,0 +1,50 @@
+ictp_publications.work:
+  path: '/admin/ictp_publications'
+  defaults:
+    _controller: '\Drupal\ictp_publications\Controller\IctpPublicationsController::home'
+    _title: 'ICTP Publications import'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'administer content'
+ictp_publications.work.add:
+  path: '/admin/ictp_publications/add/{orcidID}/{forcemode}'
+  defaults:
+    orcidID: null
+    forcemode: null
+    _controller: '\Drupal\ictp_publications\Controller\IctpPublicationsController::add'
+    _title: 'Import publications'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'
+ictp_publications.arxiv.add:
+  path: '/admin/ictp_publications/arxiv/add/{orcidID}/{forcemode}'
+  defaults:
+    orcidID: null
+    forcemode: null
+    _controller: '\Drupal\ictp_publications\Controller\IctpPublicationsController::arxivAdd'
+    _title: 'Import publications from arxiv'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'
+ictp_publications.work.delete:
+  path: '/admin/ictp_publications/delete'
+  defaults:
+    _controller: '\Drupal\ictp_publications\Controller\IctpPublicationsController::delete'
+    _title: 'Delete events'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'access content'
+ictp_publications.work.memberlist:
+  path: '/admin/ictp_publications/members'
+  defaults:
+    orcidID: null
+    _controller: '\Drupal\ictp_publications\Controller\IctpPublicationsController::memberList'
+    _title: 'Members with ORCID'
+  options:
+    no_cache: 'TRUE'
+  requirements:
+    _permission: 'administer content'

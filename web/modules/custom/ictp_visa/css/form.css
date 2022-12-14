@@ -1,0 +1,8 @@
+.block-visa-guide-block .form-radios > .form-item:first-of-type {
+  display: none;
+}
+
+.block-visa-guide-block .swiper-button-next::after,
+.block-visa-guide-block .swiper-rtl .swiper-button-prev::after {
+  content: inherit;
+}

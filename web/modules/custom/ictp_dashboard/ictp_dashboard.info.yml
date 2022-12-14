@@ -1,0 +1,9 @@
+name: "ICTP Dashboard"
+type: module
+description: "Custom dashboard and route for content editor"
+core_version_requirement: ^9 || ^10
+package: "ICTP"
+version: 0.0.7
+configure: ictp_dashoboard.home
+libraries:
+  - ictp_dashboard/dashboard

@@ -1,0 +1,21 @@
+uuid: a41e9ecd-31ba-44da-9def-db9c32b835e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_selection_process
+    - node.type.opportunity
+  module:
+    - text
+id: node.opportunity.field_selection_process
+field_name: field_selection_process
+entity_type: node
+bundle: opportunity
+label: 'Selection process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

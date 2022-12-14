@@ -1,0 +1,28 @@
+uuid: 842fb738-57f8-4ae9-ac89-8d6ce76e66fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_programmes
+    - node.type.opportunity
+id: node.opportunity.field_related_programmes
+field_name: field_related_programmes
+entity_type: node
+bundle: opportunity
+label: 'Related programmes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      opportunity: opportunity
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

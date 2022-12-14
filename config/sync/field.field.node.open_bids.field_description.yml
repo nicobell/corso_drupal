@@ -1,0 +1,21 @@
+uuid: 8f7db37f-540c-4f1f-86ef-abd7e4498ada
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.open_bids
+  module:
+    - text
+id: node.open_bids.field_description
+field_name: field_description
+entity_type: node
+bundle: open_bids
+label: Description
+description: 'Insert <strong>ENGLISH</strong> description and <strong>ITALIAN </strong>description in this field'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
