@@ -1,4 +1,4 @@
-uuid: 8a0c6174-2e77-4a93-b718-ceffc098f468
+uuid: c91aff57-f658-418c-9694-f1017ae56efd
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: mediteran_login
 theme: mediteran
 region: content
-weight: 0
+weight: 10
 provider: null
 plugin: user_login_block
 settings:

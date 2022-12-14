@@ -1,4 +1,4 @@
-uuid: 9bf4eb5b-47aa-4391-9b38-05f22c47135c
+uuid: 5a783e70-eaa0-49f2-a83a-76bb48390a05
 langcode: en
 status: true
 dependencies:
@@ -34,12 +34,3 @@ filters:
     status: true
     weight: 11
     settings: {  }
-  filter_html:
-    id: filter_html
-    provider: filter
-    status: false
-    weight: -10
-    settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre> <div> <iframe width height src frameborder allowfullscreen allow> <object> <param>'
-      filter_html_help: true
-      filter_html_nofollow: false

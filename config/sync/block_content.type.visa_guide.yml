@@ -1,8 +1,0 @@
-uuid: 042b8033-9be9-4357-84c0-776406add3f7
-langcode: en
-status: true
-dependencies: {  }
-id: visa_guide
-label: 'Visa guide answers'
-revision: 0
-description: 'Create visa guide answers'

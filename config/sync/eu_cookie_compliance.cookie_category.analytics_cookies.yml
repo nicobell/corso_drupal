@@ -1,9 +1,0 @@
-uuid: 1a4fd370-3918-4e5f-9a7d-bc49b03266a5
-langcode: en
-status: true
-dependencies: {  }
-id: analytics_cookies
-label: 'Analytics Cookies'
-description: ''
-checkbox_default_state: unchecked
-weight: -9

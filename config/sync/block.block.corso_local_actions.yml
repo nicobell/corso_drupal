@@ -1,0 +1,20 @@
+uuid: ca99de0b-0b26-4d3c-b882-c06e565cd49d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - corso
+_core:
+  default_config_hash: XRdb8LpbArVA6CpuuEZxzi50JIdjsJaCCZ5o3fH0Blk
+id: corso_local_actions
+theme: corso
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

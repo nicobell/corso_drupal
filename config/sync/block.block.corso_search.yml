@@ -1,0 +1,23 @@
+uuid: 4e48c62f-4589-44ad-8362-db8c1bdbc84b
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - corso
+_core:
+  default_config_hash: jQ-C8l3dJPqYCGST1e-kSjR14PDP4wq-iFbp8dMFcRo
+id: corso_search
+theme: corso
+region: header
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: visible
+  provider: search
+  page_id: node_search
+visibility: {  }

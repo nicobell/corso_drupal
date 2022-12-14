@@ -1,0 +1,22 @@
+uuid: 26f83950-ff33-4880-b39c-8fecf4f25014
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - corso
+_core:
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
+id: corso_help
+theme: corso
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

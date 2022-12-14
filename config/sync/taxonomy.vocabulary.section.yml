@@ -1,8 +1,0 @@
-uuid: ed3041d5-7be1-45ab-b4d8-2bca7171581e
-langcode: en
-status: true
-dependencies: {  }
-name: Section
-vid: section
-description: 'Main website sections'
-weight: 0

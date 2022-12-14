@@ -1,8 +1,0 @@
-uuid: b9af698a-a40b-4554-9fe9-37b26b9f3fc7
-langcode: en
-status: true
-dependencies: {  }
-name: 'Category opportunity'
-vid: category_opportunity
-description: ''
-weight: 0

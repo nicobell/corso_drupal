@@ -1,8 +1,0 @@
-uuid: 513476f2-5758-4208-a02f-e7b05d7d5a72
-langcode: en
-status: true
-dependencies: {  }
-name: Floor
-vid: floor
-description: 'Floor data (image and details)'
-weight: 0

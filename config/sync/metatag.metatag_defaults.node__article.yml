@@ -1,8 +1,0 @@
-uuid: 72c7661d-9ecf-4058-a292-861d3092d89f
-langcode: en
-status: true
-dependencies: {  }
-id: node__article
-label: 'Content: News'
-tags:
-  image_src: '[node:field_image]'

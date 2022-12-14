@@ -1,4 +1,4 @@
-uuid: d7091c35-dd77-4e93-8912-ea10676c1b7c
+uuid: aff1a8f2-6dbf-4bac-8a9d-41e09304b556
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ _core:
 id: mediteran_local_actions
 theme: mediteran
 region: content
-weight: -3
+weight: -10
 provider: null
 plugin: local_actions_block
 settings:

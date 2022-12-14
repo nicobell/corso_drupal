@@ -1,8 +1,0 @@
-uuid: b0594523-7e07-482d-885a-3b2717e9688e
-langcode: en
-status: true
-dependencies: {  }
-id: shortcuts
-label: Shortcuts
-description: ''
-locked: false

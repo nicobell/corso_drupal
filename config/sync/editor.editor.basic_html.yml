@@ -1,4 +1,4 @@
-uuid: 9c73162b-196b-4c76-8e1b-ac643002b804
+uuid: 0aaa1e61-b92c-467f-836d-15c642e9d7e9
 langcode: en
 status: true
 dependencies:
@@ -28,32 +28,28 @@ settings:
           name: Lists
           items:
             - BulletedList
+            - NumberedList
         -
           name: Media
           items:
             - Blockquote
             - DrupalImage
-            - Table
-            - Youtube
         -
           name: 'Block Formatting'
           items:
-            - Styles
+            - Format
         -
           name: Tools
           items:
             - Source
-            - ShowBlocks
   plugins:
-    language:
-      language_list: un
     stylescombo:
-      styles: "p.p|Simple paragraph\r\np.warning|Warning paragraph\r\np.notice|Notice paragraph\r\nh2.titolo_2|Titolo_2\r\nh3.titolo_3|Titolo_3\r\na.a|Simple link\r\na.special_link|Special link\r\n"
+      styles: ''
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 0
+    height: 0

@@ -1,28 +1,13 @@
-uuid: fba28850-de42-4340-a3ff-bf375ab971d1
+uuid: ae6e2f4a-aeed-4460-8812-25f843618934
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.rss
     - field.field.node.article.body
-    - field.field.node.article.field_attachments
-    - field.field.node.article.field_id_import
+    - field.field.node.article.comment
     - field.field.node.article.field_image
-    - field.field.node.article.field_images
-    - field.field.node.article.field_meta_tags
-    - field.field.node.article.field_news_audience
-    - field.field.node.article.field_news_author
-    - field.field.node.article.field_news_colloquia
-    - field.field.node.article.field_news_date
-    - field.field.node.article.field_news_highlight
-    - field.field.node.article.field_news_type
-    - field.field.node.article.field_page_subtitle
-    - field.field.node.article.field_ref_pages_related
-    - field.field.node.article.field_ref_sections
-    - field.field.node.article.field_ref_tags
-    - field.field.node.article.field_thumbnail_image
-    - field.field.node.article.field_url_news_umbraco
-    - field.field.node.article.field_youtube_video
+    - field.field.node.article.field_tags
     - node.type.article
   module:
     - user
@@ -36,29 +21,8 @@ content:
   links:
     weight: 100
     region: content
-  sharing_buttons:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
 hidden:
   body: true
-  field_attachments: true
-  field_id_import: true
+  comment: true
   field_image: true
-  field_images: true
-  field_meta_tags: true
-  field_news_audience: true
-  field_news_author: true
-  field_news_colloquia: true
-  field_news_date: true
-  field_news_highlight: true
-  field_news_type: true
-  field_page_subtitle: true
-  field_ref_pages_related: true
-  field_ref_sections: true
-  field_ref_tags: true
-  field_thumbnail_image: true
-  field_url_news_umbraco: true
-  field_youtube_video: true
-  search_api_excerpt: true
+  field_tags: true

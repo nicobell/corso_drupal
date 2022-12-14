@@ -1,25 +1,11 @@
-uuid: 8eb66841-c62e-4f1b-aee7-d40cd3e2ed2d
+uuid: 2a73635c-9dba-4ad6-be7d-61368da9b13a
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_attachments
-    - field.field.node.page.field_highlight_first_related
-    - field.field.node.page.field_image
-    - field.field.node.page.field_meta_tags
-    - field.field.node.page.field_page_subtitle
-    - field.field.node.page.field_ref_charts
-    - field.field.node.page.field_ref_page_next
-    - field.field.node.page.field_ref_pages_related
-    - field.field.node.page.field_ref_section
-    - field.field.node.page.field_thumbnail_description
-    - field.field.node.page.field_thumbnail_image
-    - image.style.page_banner
     - node.type.page
   module:
-    - file
-    - svg_image
     - text
     - user
 _core:
@@ -34,43 +20,9 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_attachments:
-    type: file_default
-    label: hidden
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_image:
-    type: image
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: page_banner
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
-    third_party_settings: {  }
-    weight: 0
+    weight: 100
     region: content
   links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
+    weight: 101
     region: content
-hidden:
-  field_highlight_first_related: true
-  field_meta_tags: true
-  field_page_subtitle: true
-  field_ref_charts: true
-  field_ref_page_next: true
-  field_ref_pages_related: true
-  field_ref_section: true
-  field_thumbnail_description: true
-  field_thumbnail_image: true
-  search_api_excerpt: true
-  sharing_buttons: true
+hidden: {  }

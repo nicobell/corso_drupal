@@ -1,0 +1,22 @@
+uuid: b3c24554-498e-4d79-bfb0-2262e2c08ddf
+langcode: en
+status: true
+dependencies:
+  theme:
+    - corso
+_core:
+  default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
+id: corso_local_tasks
+theme: corso
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,4 +1,4 @@
-uuid: c234c4a4-1d8f-4ca9-bc37-52053109e708
+uuid: 045f627f-faec-416f-9b20-c1a66bc5a85d
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
-    - svg_image
+    - image
     - user
 _core:
   default_config_hash: kD2TjItfNDKFw2CFJQfuv4Ys6qg3uYa4hCJYN2jreec
@@ -26,6 +26,4 @@ content:
     weight: 0
     region: content
 hidden:
-  langcode: true
   member_for: true
-  search_api_excerpt: true

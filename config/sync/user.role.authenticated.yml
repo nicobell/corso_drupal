@@ -1,13 +1,14 @@
-uuid: f1235779-7cd7-4a29-9fd2-7606d8a205af
+uuid: 8bafef5e-444f-4e7d-8ee6-9d06ef63dc3e
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.basic_html
   module:
+    - comment
     - contact
-    - eu_cookie_compliance
     - filter
+    - search
     - shortcut
     - system
 _core:
@@ -17,8 +18,11 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
-  - 'display eu cookie compliance popup'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
   - 'use text format basic_html'

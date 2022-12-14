@@ -1,4 +1,4 @@
-uuid: 6a7c39e6-e319-4dcd-8541-24a25f2ce088
+uuid: 156d5554-4dfd-4b48-acfb-413b8c1fead1
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - helpdesk@interfase.it
+  - nowhere@gmail.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

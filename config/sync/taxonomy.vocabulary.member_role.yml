@@ -1,8 +1,0 @@
-uuid: 81bdb36e-b951-4c59-aa23-b043ea1f823e
-langcode: en
-status: true
-dependencies: {  }
-name: 'Member role'
-vid: member_role
-description: ''
-weight: 0

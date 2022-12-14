@@ -1,4 +1,4 @@
-uuid: fd3e2aac-1d1f-4b1a-a31a-dfe93e2f44b8
+uuid: 8e68dc06-277a-4f6d-8e76-ac9836019023
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: mediteran_content
 theme: mediteran
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: system_main_block
 settings:

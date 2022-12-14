@@ -1,9 +1,0 @@
-uuid: 58e09242-fafb-4e27-aa64-93c34404c53f
-langcode: en
-status: true
-dependencies: {  }
-id: node__room
-label: 'Content: Room'
-tags:
-  description: '[node:field_ref_building:entity:title]'
-  image_src: '[node:field_image]'

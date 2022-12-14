@@ -1,8 +1,0 @@
-uuid: 0641bcbb-8111-49da-8719-56d87b9cf56d
-langcode: en
-status: true
-dependencies: {  }
-id: node__opportunity
-label: 'Content: Opportunity'
-tags:
-  description: '[node:body]'

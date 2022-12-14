@@ -1,8 +1,0 @@
-uuid: 6d3f121d-1a43-4481-b445-44fd9ed5980b
-langcode: en
-status: true
-dependencies: {  }
-id: node__announcement
-label: 'Content: Announcement'
-tags:
-  image_src: '[node:field_image]'

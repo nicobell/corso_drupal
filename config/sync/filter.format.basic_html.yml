@@ -1,4 +1,4 @@
-uuid: a2bcfa98-dd60-414d-b5c6-5771e7953b71
+uuid: 1d01a22e-d113-4726-b1a9-61f7bad5f882
 langcode: en
 status: true
 dependencies:
@@ -16,7 +16,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h4 id> <h5 id> <h6 id> <br> <span> <img src alt data-entity-type data-entity-uuid data-align data-caption width height> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <h2 id class="titolo_2"> <h3 id class="titolo_3"> <div> <iframe src allowfullscreen allow width height frameborder> <object> <param> <a href hreflang class="special_link a"> <p class="warning notice p">'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
@@ -42,17 +42,4 @@ filters:
     provider: editor
     status: true
     weight: 11
-    settings: {  }
-  filter_url:
-    id: filter_url
-    provider: filter
-    status: true
-    weight: 0
-    settings:
-      filter_url_length: 72
-  filter_autop:
-    id: filter_autop
-    provider: filter
-    status: true
-    weight: 0
     settings: {  }

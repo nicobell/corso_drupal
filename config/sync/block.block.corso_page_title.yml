@@ -1,0 +1,20 @@
+uuid: 0d5e33c5-97ea-487a-87ea-1d38bb6bace0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - corso
+_core:
+  default_config_hash: ItFhhiUOoeR7oIq73ZaCV7PAYrOwXZ-9fazMzF5DJXM
+id: corso_page_title
+theme: corso
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

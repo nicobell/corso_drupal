@@ -1,8 +1,0 @@
-uuid: 15df2e94-6c6c-47fa-8c79-cceb581324a4
-langcode: en
-status: true
-dependencies: {  }
-id: event_filter_format
-label: 'Event filter format'
-locked: false
-pattern: 'F d'

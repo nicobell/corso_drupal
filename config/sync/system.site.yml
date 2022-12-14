@@ -1,15 +1,14 @@
 _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
-uuid: a35a52ca-ac0d-4902-83a6-263b4e101aa9
-name: ICTP
-mail: helpdesk@interfase.it
+uuid: 3b923847-0b5f-4d67-b754-8b715dd2fe52
+name: 'Corso Drupal'
+mail: nowhere@gmail.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /taxonomy/term/1
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
-mail_notification: ''

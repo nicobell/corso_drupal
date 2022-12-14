@@ -1,8 +1,0 @@
-uuid: d6b939c8-308a-48d7-8ce9-308241730de2
-langcode: en
-status: true
-dependencies: {  }
-name: 'Event type'
-vid: event_type
-description: ''
-weight: 0
